@@ -37,13 +37,6 @@
   </url>
   
   <url>
-    <loc>https://jason177.com/archives/index.html</loc>
-    
-    <lastmod>2021-09-27</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jason177.com/about/index.html</loc>
     
     <lastmod>2021-09-27</lastmod>
@@ -102,7 +95,7 @@
 
   <url>
     <loc>https://jason177.com/</loc>
-    <lastmod>2021-09-27</lastmod>
+    <lastmod>2021-09-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -110,7 +103,7 @@
   
   <url>
     <loc>https://jason177.com/tags/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2021-09-27</lastmod>
+    <lastmod>2021-09-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -119,7 +112,7 @@
   
   <url>
     <loc>https://jason177.com/categories/life/</loc>
-    <lastmod>2021-09-27</lastmod>
+    <lastmod>2021-09-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
