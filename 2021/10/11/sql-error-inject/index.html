@@ -314,14 +314,17 @@ gtag('config', 'G-3ERYSKYBLP');
 <p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202110122020046.png" alt="image-20211012202051962"></p>
 <p>返回查询正确，但是什么数据都没有回显到页面中，输入1’试试</p>
 <p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202110122021286.png" alt="image-20211012202152193"></p>
-<p>好像又多了个单引号，说明可能是一个整型输入id，所以尝试直接用order by查看字段有多少个：1 order by 2</p>
+<p>好像又多了个单引号，说明可能是一个整型输入id，所以尝试直接用order by查看字段有多少个，输入：1 order by 2</p>
 <p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202110122024944.png" alt="image-20211012202407849"></p>
 <p>虽然没有语法错误，显示查询正确，但还是没有数据回显，可能是SQL报错注入(题目上已经写了，但是我就是装瞎)</p>
 <p>那就使用前面讲到的floor()函数来进行报错注入</p>
+<div class="note warning simple"><p>需要注意的是这里的union联合查询中，要让前一个SQL语句成立，后一个SQL语句才能把内容报错到页面中，所以这里和下面的id=1</p>
+</div>
+
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 union select count(*),concat((select database()),0x7e,floor(rand(0)*2))name from information_schema.tables group by name; </span><br></pre></td></tr></table></figure>
 
 <p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202110122020101.png" alt="image-20211012202005984"></p>
-<p>显示当前数据库为sqli，再爆表名(<strong>不能用group_concat,而且要加limit</strong>)</p>
+<p>显示当前数据库为sqli，再爆表名(<mark class="hl-label red">不能用group_concat,而且要加limit</mark> )</p>
 <blockquote>
 <p>不加limit</p>
 </blockquote>
