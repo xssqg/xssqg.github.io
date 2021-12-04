@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>2021年黑盾杯wp</title>
+      <link href="/2021/12/03/hdb2021/"/>
+      <url>/2021/12/03/hdb2021/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>二轮游了，拿了个优秀奖…不过第一次参加CTF省赛，也算是超过预期了吧，一开始是没想到能过初赛进入到复赛，和各高校的大佬比起来进决赛想必也是只有被吊打的份…</p><p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112031352342.png" alt="image-20211203135249754"></p><p>希望以后还能有更多机会参加更多的比赛锻炼锻炼自己吧</p><h1 id="DNS协议分析"><a href="#DNS协议分析" class="headerlink" title="DNS协议分析"></a>DNS协议分析</h1><p>解压DNS协议分析zip压缩包，得到一个pcapng后缀的文件</p><p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112031358371.png" alt="image-20211203135827300"></p><p>用wireshark打开，并且根据题意，过滤出dns协议的数据</p><p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112031359950.png" alt="image-20211203135912873"></p><p>可以看到在info字段，有疑似base64编码的痕迹</p><p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112031402444.png" alt="image-20211203140206375"></p><p>这时候先解码前四个字符，解出fla</p><p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112031402994.png" alt="image-20211203140242915"></p><p>大概率是flag被base64编码之后分解成很多段了</p><p>将所有疑似 base64 编码后的字符串找出</p><p><strong>ZmxhZ3tlNj</strong>.i6ov08.dnslog.cn</p><p><strong>YyYWMxNTRj</strong>.i6ov08.dnslog.cn</p><p><strong>YTM3NmUxYz</strong>.i6ov08.dnslog.cn</p><p><strong>AwMWVlOGJi</strong>.i6ov08.dnslog.cn</p><p><strong>ZTgxMzE4Yn0K</strong>.i6ov08.dnslog.cn</p><p>将其拼接在一起，得到<strong>ZmxhZ3tlNjYyYWMxNTRjYTM3NmUxYzAwMWVlOGJiZTgxMzE4Yn0K</strong></p><p>进行base64解码可得flag</p><p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112031405591.png" alt="image-20211203140513531"></p><h1 id="日志分析"><a href="#日志分析" class="headerlink" title="日志分析"></a>日志分析</h1><p>解开压缩文件，得到名为 access.log 的日志文件，将其打开</p><p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112031406614.png" alt="image-20211203140605535"></p><p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112031406879.png" alt="image-20211203140612821"></p><p>看到很多url编码，先用notepad++自带的MIME Tools中的url Decode解码来把整个文本解码</p><p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112031406807.png" alt="image-20211203140637744"></p><p>根据题目描述，需要得到黑客拿到的管理员密码，所以直接ctrl+F查找password字段</p><p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112031406964.png" alt="image-20211203140652887"></p><p>可以看出来是盲注，通过比较password中每个字符的ascii码大小得到对应的字符，再根据后面返回的数据长度，长度678是判断错误，675是判断正确</p><p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112031407194.png" alt="image-20211203140708109"></p><p>将其中正确的数值根据ascii表转为字符，即为管理员密码</p><p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112031407693.png" alt="image-20211203140742621"></p><p>Flag 即为 ngjfdsUbdK</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CTF比赛 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> http </tag>
+            
+            <tag> SSRF </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CTFHub-SSRF</title>
       <link href="/2021/11/17/ssrf/"/>
       <url>/2021/11/17/ssrf/</url>
