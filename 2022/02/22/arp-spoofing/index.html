@@ -164,7 +164,7 @@ gtag('config', 'G-3ERYSKYBLP');
 <li>如果主机A没有在ARP缓存中找到IP与MAC的映射，它将会把ARP请求帧广播到本地网络上的所有主机，源主机A的IP地址和MAC地址都包含在ARP请求中。局域网中的每台主机都接收到ARP请求并且检查是否与自己的IP地址匹配。如果主机发现请求的IP地址与自己的IP地址不匹配，则丢弃ARP请求包。</li>
 <li>主机B确定ARP请求中的IP地址与自己的IP地址匹配，则将主机A的IP地址和主机A的MAC地址映射添加本地ARP缓存中。</li>
 <li>主机B将包含着主机B的MAC地址的ARP回复消息返回给主机A，主机A在本地更新主机B的IP地址和主机B的MAC地址映射缓存。</li>
-<li>本机缓存是有<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%94%9F%E5%AD%98%E6%9C%9F">生存期</a>的，生存期结束后，将再次重复上面的过程。主机B的MAC地址一旦确定，主机A就能向主机B发送IP通信了。</li>
+<li>本机缓存是有生存期的，生存期结束后，将再次重复上面的过程。主机B的MAC地址一旦确定，主机A就能向主机B发送IP通信了。</li>
 </ol>
 </div>
 
