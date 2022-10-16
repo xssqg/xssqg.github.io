@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jason177.com/Gallery/npy/index.html</loc>
+    
+    <lastmod>2022-10-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jason177.com/about/index.html</loc>
     
     <lastmod>2022-10-16</lastmod>
@@ -10,13 +17,6 @@
   
   <url>
     <loc>https://jason177.com/Gallery/index.html</loc>
-    
-    <lastmod>2022-10-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jason177.com/Gallery/npy/index.html</loc>
     
     <lastmod>2022-10-16</lastmod>
     
@@ -228,13 +228,6 @@
   </url>
   
   <url>
-    <loc>https://jason177.com/tags/http/</loc>
-    <lastmod>2022-10-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jason177.com/tags/CS/</loc>
     <lastmod>2022-10-16</lastmod>
     <changefreq>daily</changefreq>
@@ -242,7 +235,7 @@
   </url>
   
   <url>
-    <loc>https://jason177.com/tags/SSRF/</loc>
+    <loc>https://jason177.com/tags/http/</loc>
     <lastmod>2022-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -250,6 +243,13 @@
   
   <url>
     <loc>https://jason177.com/tags/FIle-Inclusion/</loc>
+    <lastmod>2022-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jason177.com/tags/SSRF/</loc>
     <lastmod>2022-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -335,13 +335,6 @@
   </url>
   
   <url>
-    <loc>https://jason177.com/categories/CTFHub/</loc>
-    <lastmod>2022-10-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jason177.com/categories/Red/</loc>
     <lastmod>2022-10-16</lastmod>
     <changefreq>daily</changefreq>
@@ -349,7 +342,7 @@
   </url>
   
   <url>
-    <loc>https://jason177.com/categories/CTF%E6%AF%94%E8%B5%9B/</loc>
+    <loc>https://jason177.com/categories/CTFHub/</loc>
     <lastmod>2022-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -357,6 +350,13 @@
   
   <url>
     <loc>https://jason177.com/categories/DVWA/</loc>
+    <lastmod>2022-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jason177.com/categories/CTF%E6%AF%94%E8%B5%9B/</loc>
     <lastmod>2022-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
